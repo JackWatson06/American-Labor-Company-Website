@@ -1,0 +1,294 @@
+:root
+{
+
+    --primary: #2B2E76;
+    --primary-transparent: #2B2E76C0;
+    --secondary: #000929;
+
+    --background-primary: #ffffff;
+    --background-secondary: linear-gradient(135.17deg, #F1F1F1 0%, #F0F0F0 53.33%);
+    --background-tertiary: #d69f9f99;
+
+    --text-light: #ffffff;
+    --text-muted: #5a5a5a;
+    --text-dark: #000000;
+
+}
+
+html,
+body 
+{
+    margin: 0px;
+    padding: 0px;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    width: 100%;
+
+    font-family: 'Roboto', Verdana, sans-serif; 
+    font-size: 100%;
+}
+
+ul
+{
+    list-style: none;
+
+    padding: 0;
+    margin: 0;
+}
+
+li
+{
+    padding: 0;
+    margin: 0;
+}
+
+main
+{
+    width: 100%;
+}
+
+
+h1
+{
+    font-weight: 400;
+    font-size: 2.35rem;
+}
+
+a
+{
+
+    color: inherit;
+    text-decoration: inherit;
+
+}
+
+
+.section-header
+{
+    display:flex;
+    width: 100%;
+
+    text-align: center;
+    margin: auto;
+
+    margin-top: 8rem;
+}
+
+.transparent-button
+{
+    background-color: var(--primary-transparent);
+    color: var(--text-light);
+    
+    padding: 0.75rem 1.25rem;
+
+    border: none;
+    border-radius: 40px;
+
+    font-size: 1rem;
+}
+
+
+/**************/
+/* Navigation */
+/**************/
+
+.nav-alc-logo
+{
+    display: inline-block;
+
+    width: 3rem;
+    height: 3rem;
+
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.nav-company-name-header
+{
+    display: inline-block;
+
+    width: 10rem;
+    text-align: left;
+
+    margin-bottom: 0rem;
+    margin-top: 0;
+}
+
+.title-logo-link
+{
+    display: flex;
+    justify-content: flex-start;
+
+    align-items: flex-end;
+
+    margin: 0.5rem 0;
+}
+
+#nav-container
+{
+    display: none;
+
+}
+
+#mobile-nav-container
+{
+    position: fixed;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: solid 1px;
+
+    color: var(--text-light);
+
+    width: 100%;
+}
+
+.hamburger-icon
+{
+    font-size: 2rem;
+    margin-right: 1rem;
+
+}
+
+.section-header
+{
+    display:flex;
+    max-width: 100%;
+    text-align: center;
+    margin: auto;
+    
+    color: var(--primary);
+
+    margin-top: 2.5rem;
+}
+
+.section-header span
+{
+    max-width: 17rem;
+    text-overflow: clip;
+}
+
+.section-header:before, .section-header:after 
+{
+    color: var(--primary);
+    content: '';
+    flex: 1;
+    border-bottom: solid 1px;
+}
+
+.section-header:before
+{
+    margin-right: 0.5em;
+}
+
+.section-header:after
+{
+    margin-left: 0.5em;
+}
+
+
+
+@media (min-width: 43em){
+
+}
+
+
+@media (min-width: 62em ){
+
+}
+
+
+@media (min-width: 82em){    
+
+    /* .section-header
+    {
+        display:flex;
+        width: 70rem;
+        max-width: 100%;
+        text-align: center;
+        margin: auto;
+        margin-top: 8rem;
+    }
+    
+    .section-header span
+    {
+        max-width: 17rem;
+        text-overflow: clip;
+    }
+    
+    .section-header:before, .section-header:after {
+        color: var(--primary);
+        content: '';
+        flex: 1;
+        border-bottom: solid 1px;
+        margin: auto 1em;
+      } */
+    
+      
+    
+    
+    /**************/
+    /* Navigation */
+    /**************/
+    
+    /* #nav-alc-logo
+    {
+        width: 20px;
+        height: 20px;
+    }
+    
+    #nav-company-name-header
+    {
+        display: inline;
+    }
+    
+    #nav-container
+    {
+        display: flex;
+    
+        position: fixed;
+        top: 0;
+        left: 0;
+    
+        width: 100%
+    }
+    
+    #nav-container li
+    {
+        margin: 1rem 1rem;
+    }
+    
+    #nav-contact-info-container a
+    {
+        display: block;
+    }
+    
+    .nav-middle-u-list
+    {
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .nav-left-u-list
+    {
+        flex: 1;
+        display: flex;
+        justify-content: flex-start;
+    }
+    
+    .nav-right-u-list
+    {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+    } */
+    
+
+}
+
