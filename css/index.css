@@ -3,7 +3,7 @@ main
 
     display: grid;
     grid-template-rows: 85vh auto;
-    grid-template-columns: 100%;
+    grid-template-columns: 1fr;
     
 }
 
@@ -16,7 +16,7 @@ main
 header
 {
 
-    width: 100%;
+    /* width: 100%; */
     height: 100%;
 
     display: flex;
@@ -33,9 +33,8 @@ header
     background-size: cover;
 
     color: var(--text-light);
-    
-}
 
+}
 
 header button
 {
@@ -47,22 +46,20 @@ header button
 
 #find-employees-button
 {
-    margin-bottom: 20%;
+    margin-bottom: 30%;
 }
 
 
-#mission-statment-u-list
-{
-    margin-top: 2rem;
-}
+
+/*******************/
+/*   M Statement   */
+/*******************/
 
 #mission-statment-u-list li
 {
-    width: 45rem;
-    max-width: 100%;
+    width: 100%;
 
-    margin-left: 1rem;
-    margin-right: 0.25rem;
+    /* margin-left: 1rem; */
     margin-top: 3rem;
 }
 
@@ -70,3 +67,62 @@ header button
 {
     color: var(--primary);
 }
+
+
+
+/*******************/
+/*   Find Jobs     */
+/*******************/
+
+
+#find-jobs-container
+{
+    color: var(--text-light);
+    background-color: var(--background-secondary);
+}
+
+#find-jobs-container img
+{
+    width: 100%;
+}
+
+#find-jobs-container h3
+{
+    color: var(--text-light);
+}
+
+#find-jobs-container button
+{
+    display: block;
+
+    text-align: center;
+    margin: auto;
+
+    margin-top: 2rem;
+}
+
+.section-card-container
+{
+    background-color: var(--secondary);
+
+    padding-bottom: 2rem;
+
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+    border-radius: 0.3rem;
+}
+
+
+
+/*******************/
+/*     Slogan      */
+/*******************/
+
+#slogan-container
+{
+    text-align: center;
+}
+
+
+

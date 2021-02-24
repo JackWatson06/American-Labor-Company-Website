@@ -13,8 +13,8 @@
         <link rel="stylesheet" href="./css/font.css">
         <link rel="stylesheet" href="./css/universal.css">
         <link rel="stylesheet" href="./css/index.css">
-        <link rel="stylesheet" href="./css/media-queries.css">
 
+        <script src="./src/index.js"></script>
         <script src="https://kit.fontawesome.com/afc1b18350.js" crossorigin="anonymous"></script>
 
     </head>
@@ -85,14 +85,81 @@
             
         </nav>
 
-        <nav id="mobile-nav-container">
+        <nav id="mobile-nav-container" class="">
 
             <a href="index.html" class="title-logo-link">
                 <img class="nav-alc-logo" src="./media/images/svg/logo.svg" alt="ALC">
                 <h3 class="nav-company-name-header">American Labor Company</h3>
             </a>
 
-            <i class="hamburger-icon fas fa-bars"></i>
+            <i class="mobile-nav-icon fas fa-bars"></i>
+            <!-- <i class="mobile-nav-icon fas fa-chevron-up"></i> -->
+
+            <!-- <div id="mobile-nav-menu-container">
+
+                <div id="mobile-nav-socials-container">
+                    <ul>
+                        <li>
+                            <a href="https://www.linkedin.com/in/jack-watson-46ab71196/">
+                                <img class="social-media-svg" src="media/images/svg/linkedin_blue.svg" alt="LinkedIn"  />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/">
+                                <img class="social-media-svg" src="media/images/svg/instagram_blue.svg" alt="Instagram"  />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/">
+                                <img class="social-media-svg" src="media/images/svg/facebook_blue.svg" alt="Facebook"  />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/?lang=en">
+                                <img class="social-media-svg" src="media/images/svg/twitter_blue.svg" alt="Twitter" />
+                            </a>
+                        </li>
+                    </ul>
+                    <p>Follow our adventure to transform american spirit!</p>
+                </div>
+
+                <div id="mobile-nav-contact-container">
+                    <div>
+                        Phone:
+                        <br>
+                        <a class="primary-link" href="tel:716-771-8154">716-771-8154</a>
+                    </div>
+                    <div>
+                        Email:
+                        <br>
+                        <a class="primary-link" href="mailto:info@americanlaborcompany.com">info@americanlaborcompany.com</a>
+                    </div>
+                </div>
+                <ul class="nav-hamburger-u-list">
+                    <li>
+                        <a href="html/about-us.html">
+                            American Labor Company
+                        </a>
+                    </li>
+                    <li>
+                        <a href="html/about-us.html">
+                            About Us
+                        </a>
+                    </li>
+                    <li>
+                        <a href="html/employee.html">
+                            Find a Job
+                        </a>
+                    </li>
+                    <li>                    
+                        <a href="html/employer.html">
+                            Find a Employee
+                        </a>
+                    </li>
+                </ul>
+
+
+            </div> -->
             
         </nav>
 
@@ -101,16 +168,16 @@
 
             <!-- Put header of website here -->
             <!-- This header always needs to be around 80vh -->
-            <header>
+            <header class="grid-gutter" >
                 <h1>The American Dream,<br> One Placement at a Time</h1>
                 <button class="transparent-button">Find a Job</button>
                 <button id="find-employees-button" class="transparent-button">Find Employees</button>
             </header>
 
-            <section id="mission-statement-container">
+            <section id="mission-statement-container" class="grid-gutter">
 
                 <h2 class="section-header"><span>OUR MISSION</span></h2>
-                <ul id="mission-statment-u-list">
+                <ul id="mission-statment-u-list" class="section-body">
                     <li>
                         <h3>Helping You Live Your American Dream</h3>
                         <p>American Labor Company is committed to helping you live your American Dream, one placement at a time. </p>
@@ -130,43 +197,43 @@
 
             </section>
 
-            <section>
+            <section id="find-jobs-container" class="grid-gutter">
 
-                <div>
-                    <img src="./media/images/png/">
-                    <div>
-                        <h4>Find a Job</h4>
+                <div class="section-card-container">
+                    <img src="./media/images/png/worker.png">
+                    <div class="grid-gutter">
+                        <h3>Find a Job</h3>
                         <p>Whether you are an expert in your trade or are a hardworking individual who is eager to learn, American Labor Company has a home for you. Apply now and let the ALC team try to match you with one of our partnered companies.</p>
-                        <button>Apply Now</button>
+                        <button class="transparent-button">Apply Now</button>
                     </div>
                 </div>
 
-                <div>
-                    <img src="./media/images/png/">
-                    <div>
-                        <h4>Find Employees</h4>
+                <div class="section-card-container">
+                    <img src="./media/images/jpg/company.jpg">
+                    <div class="grid-gutter">
+                        <h3>Find Employees</h3>
                         <p>American Labor Company offers skilled labor recruiting and placement solutions for a variety of industries. Whether you are looking for an experienced project manager, an entry-level laborer, or anyone in between, American Labor Company has you covered. </p>
-                        <button>Contact Us</button>
+                        <button class="transparent-button">Contact Us</button>
                     </div>
                 </div>
 
             </section>
 
-            <section>
-                <h2>WHY WORK WITH ALC</h2>
-                <p>Our team goes beyond resumes and job descriptions to proactively match candidates with companies based on personalities and tailored requirements from both parties. Whether you are an employer or an employee, the ALC team is excited to sit down with you and determine your specific needs. To get started, reach out to us today!</p>
+            <section class="grid-gutter">
+                <h2 class="section-header"><span>WHY WORK WITH ALC</span></h2>
+                <p class="section-body">Our team goes beyond resumes and job descriptions to proactively match candidates with companies based on personalities and tailored requirements from both parties. Whether you are an employer or an employee, the ALC team is excited to sit down with you and determine your specific needs. To get started, reach out to us today!</p>
             </section>
 
-            <section>
-                <a href="html/about-us.html">
+            <section id="slogan-container" class="grid-gutter section-body">
+                <a class="primary-link" href="html/about-us.html">
                     <h1>The American Dream, One Placement at a Time</h1>
                 </a>
             </section>
 
-            <footer>
-                <div>
-                    <div>
-                        <img src="media/images/svg/logo_word.svg" />
+            <footer id="footer-container"  class="grid-gutter">
+                <div class="footer-row-container">
+                    <img id='footer-logo' src="media/images/svg/logo_word.svg" />
+                    <div class="footer-socials-container">
                         <ul>
                             <li>
                                 <a href="https://www.linkedin.com/in/jack-watson-46ab71196/">
@@ -191,13 +258,23 @@
                         </ul>
                         <p>Follow our adventure to transform american spirit!</p>
                     </div>
-                    <div>
-                        <p><b>Buffalo Headquarters</b></p>
+                </div>
+                <div class="footer-row-container">
+                    <div id="footer-location-container">
+                        <p><u><b>Buffalo Headquarters</b></u></p>
                         <p>102 Roycroft Circle</p>
                         <p>East Aurora, NY</p>
                         <p>14052, PO Box 5</p>
-                        <a href="tel:716-771-8154">P: 716-771-8154</a>
-                        <a href="mailto:info@americanlaborcompany.com">E: info@americanlaborcompany.com</a>
+                    </div>
+                    <div id="footer-contact-container">
+                        Phone:
+                        <br>
+                        <a class="white-link" href="tel:716-771-8154">716-771-8154</a>
+                        <br>
+                        <br>
+                        Email:
+                        <br>
+                        <a class="white-link" href="mailto:info@americanlaborcompany.com">info@americanlaborcompany.com</a>
                     </div>
                 </div>
                 <p>Ⓒ 2020 American Labor Company. All rights reserved.</p>
