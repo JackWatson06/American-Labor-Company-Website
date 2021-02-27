@@ -1,23 +1,14 @@
-window.onload = (e) => {
-
-    let bound = 10;
-    let navigationBar = document.querySelector("#mobile-nav-container");
-
-    handleNavigation = (e) => {
-        const window = e.currentTarget;
-        applyClassBasedOnScrollBounds(window);
+const getMobileNavigationElements = () =>
+{
+    const navigationElements = {
+        navContainer : document.querySelector("#nav-container"),
+        mobileNavContainer : document.querySelector("#mobile-nav-container"),
+        mobileNavMenuContainer : document.querySelector("#mobile-nav-menu-container"),
+        hamburgerIcon : document.querySelector("#hamburger-icon"),
+        chevronIcon : document.querySelector("#chevron-icon")
     };
 
-    applyClassBasedOnScrollBounds = (window) => {
-        if(window.scrollY <= bound){
-            navigationBar.classList.remove("nav-bar-scrolling");
-        }else{
-            navigationBar.classList.add("nav-bar-scrolling");
-        }
-    }
-
-
-    window.addEventListener('scroll', e => this.handleNavigation(e));
-    applyClassBasedOnScrollBounds(window);
-    
+    return navigationElements;
 }
+
+let navIsOpen = false;
