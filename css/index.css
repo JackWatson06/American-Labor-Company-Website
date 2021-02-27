@@ -76,7 +76,7 @@ header button
 }
 
 
-@media (min-width: 43em){
+@media (min-width: 46em){
 
     
 
@@ -95,32 +95,11 @@ header button
         margin-top: 1rem;
     }
 
-    #find-jobs-container > div:first-child
-    {
-        margin-top: 5rem;
-    }
-
-    #find-jobs-container > div:last-child
-    {
-        margin-bottom: 5rem;
-    }
-
 
 }
 
 
 @media (min-width: 82em){    
-
-
-    #find-jobs-container > div:first-child
-    {
-        margin-top: 8rem;
-    }
-
-    #find-jobs-container > div:last-child
-    {
-        margin-bottom: 8rem;
-    }
 
     #slogan-container
     {

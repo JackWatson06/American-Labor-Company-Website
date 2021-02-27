@@ -257,7 +257,7 @@ a
     display: flex;
 
     margin: auto;
-    margin-top: 2.5rem;
+    margin-top: 0rem;
 
     text-align: center;
     
@@ -296,7 +296,8 @@ a
 
 .section-body
 {
-    margin: 3rem 0;
+    margin: 0 auto;
+    margin-top: 3rem
 }
 
 .section-body li
@@ -311,6 +312,18 @@ a
     color: var(--primary);
 }
 
+.section-body-bottom-margin
+{
+    margin-bottom: 5rem;
+}
+
+.section-container
+{
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+
 
 
 /*******************/
@@ -319,13 +332,23 @@ a
 
 .section-card-container
 {
-    margin: 4rem 0;
-
     padding-bottom: 2rem;
+
+    margin: 3rem 0;
 
     background-color: var(--secondary);
 
     border-radius: 0.3rem;
+}
+
+.top-section-card
+{
+    margin-top: 0;
+}
+
+.bottom-section-card
+{
+    margin-bottom: 0;
 }
 
 .section-card-container img
@@ -428,8 +451,8 @@ a
 /*****************/
 
 
-/* 688px - 991px: Tablets, and small laptops*/
-@media (min-width: 43em){
+/* 736px - 991px: Tablets, and small laptops*/
+@media (min-width: 46em){
 
     .grid-gutter
     {
@@ -499,6 +522,7 @@ a
 
         display: flex;
         justify-content: flex-end;
+        align-items: center;
     }
     
     #nav-left-u-list a
@@ -563,8 +587,6 @@ a
 
     .section-body
     {
-        margin: 3rem auto;
-        margin-bottom: 4rem;
         width: 34rem;
     }
 
@@ -749,17 +771,14 @@ a
         margin-left: 2rem;
     }
 
-    .section-header {
+    .section-header 
+    {
         width: 60rem;
-
-        margin-top: 5.5rem;
     }
 
-    .section-body {
-
-        width: 40rem;
-
-        margin-bottom: 8rem;
+    .section-body 
+    {
+        width: 45rem;
     }
 
 }

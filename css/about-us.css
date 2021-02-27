@@ -4,3 +4,8 @@ main
     grid-template-rows: auto;
     grid-template-columns: 100%;
 }
+
+#about-us-container
+{
+    margin-top: 4rem;
+}
