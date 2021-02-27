@@ -1,4 +1,4 @@
-import * as mobileNav from "mobile-nav.js";
+import * as mobileNav from "./mobile-nav.js";
 
 window.onload = (e) =>{
 
