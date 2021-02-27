@@ -5,55 +5,47 @@
     Purpose: Provide javascript code for the ALC website.
 
 */
-(function() {
-    const init = () =>{
 
-        mobileNavigationMenuSetup();
+import * as navigationHelper from "./navigation-helper.js";
 
-    }
+const mobileNavigationMenuSetup = () => 
+{
+    const navElements = navigationHelper.getMobileNavigationElements();
+    navElements.mobileNavContainer.addEventListener('click', e => toggleNav(e, navElements));
+}
 
-    const mobileNavigationMenuSetup = () => 
+
+let navIsOpen = false;
+const toggleNav = (e, navElements) => 
+{
+    navIsOpen = !navIsOpen;
+    if(navIsOpen)
     {
-        const navElements =  getMobileNavigationElements();
-        navElements.mobileNavContainer.addEventListener('click', e => toggleNav(e, navElements));
+        showNav(e, navElements);
     }
-
-    const toggleNav = (e, navElements) => 
+    else
     {
-        navIsOpen = !navIsOpen;
-        if(navIsOpen)
-        {
-            showNav(e, navElements);
-        }
-        else
-        {
-            hideNav(e, navElements);
-        }
+        hideNav(e, navElements);
     }
+}
 
-    const hideNav = (e, navElements) => 
-    {
-        navElements.mobileNavMenuContainer.style.transform = "translateY(-100%)"
-        navElements.mobileNavContainer.style.top = `0px`;
+const hideNav = (e, navElements) => 
+{
+    navElements.mobileNavMenuContainer.style.transform = "translateY(-100%)"
+    navElements.mobileNavContainer.style.top = `0px`;
 
-        navElements.hamburgerIcon.classList.remove("display-none");
-        navElements.chevronIcon.classList.add("display-none");
-    }
+    navElements.hamburgerIcon.classList.remove("display-none");
+    navElements.chevronIcon.classList.add("display-none");
+}
 
-    const showNav = (e, navElements) => 
-    {
-        navElements.mobileNavMenuContainer.style.transform = "translateY(0%)"
-        navElements.mobileNavContainer.style.top = `${navElements.mobileNavMenuContainer.offsetHeight}px`;
+const showNav = (e, navElements) => 
+{
+    navElements.mobileNavMenuContainer.style.transform = "translateY(0%)"
+    navElements.mobileNavContainer.style.top = `${navElements.mobileNavMenuContainer.offsetHeight}px`;
 
-        navElements.mobileNavContainer.classList.add("nav-bar-scrolling");
-        navElements.hamburgerIcon.classList.add("display-none");
-        navElements.chevronIcon.classList.remove("display-none");
-    }
+    navElements.mobileNavContainer.classList.add("nav-bar-scrolling");
+    navElements.hamburgerIcon.classList.add("display-none");
+    navElements.chevronIcon.classList.remove("display-none");
+}
 
-
-    window.onload = (e) => {
-
-        init();
-
-    }
-})();
+export { mobileNavigationMenuSetup }

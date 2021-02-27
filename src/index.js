@@ -1,14 +1,9 @@
-const getMobileNavigationElements = () =>
-{
-    const navigationElements = {
-        navContainer : document.querySelector("#nav-container"),
-        mobileNavContainer : document.querySelector("#mobile-nav-container"),
-        mobileNavMenuContainer : document.querySelector("#mobile-nav-menu-container"),
-        hamburgerIcon : document.querySelector("#hamburger-icon"),
-        chevronIcon : document.querySelector("#chevron-icon")
-    };
+import * as mobileNav from "./mobile-nav.js";
+import * as scrolling from "./scrolling.js";
 
-    return navigationElements;
+window.onload = (e) =>{
+
+    mobileNav.mobileNavigationMenuSetup();
+    scrolling.navigationChangeColorOnScrollSetup();
+
 }
-
-let navIsOpen = false;
