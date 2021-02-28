@@ -12,10 +12,10 @@
 
         <link rel="stylesheet" href="./css/font.css">
         <link rel="stylesheet" href="./css/universal.css">
-        <link rel="stylesheet" href="./css/index.css">
+        <link rel="stylesheet" href="./css/employee.css">
         <link rel="icon" href="./media/images/svg/logo.svg">
 
-        <script src="./src/index.js" type="module"></script>
+        <script src="./src/employee.js" type="module"></script>
         <script src="https://kit.fontawesome.com/afc1b18350.js" crossorigin="anonymous"></script>
 
     </head>
@@ -153,46 +153,129 @@
         </div>
 
         <main>
-            <header class="grid-gutter" >
-                <h1>The American Dream,<br> One Placement at a Time</h1>
-                <button class="primary-button">Find a Job</button>
-                <button class="primary-button">Find Employees</button>
+            <header class="grid-gutter section-light-text drop-area" >
+                <h2 class="section-header"><span>JOB FORM</span></h2>
+
+                <div class="section-body">
+
+                    <p class="section-body-bottom-margin">Fill out the form below to apply for positions with American Labor Company. We will contact you soon to provide an update. The ALC hiring process is entirely free to someone who is seeking employment.  Beneath the form is information on the next steps of the hiring process.</p>
+
+                    <form id="job-form">
+
+                        <div id="name-field" class="form-group">
+                            <label for="name">Full Name</label>
+                            <input id="name" type="text" name="name" placeholder="Name*">
+                        </div>
+
+                        <div id="email-field" class="form-group">
+                            <label for="email">Email</label>
+                            <input id="email" type="email" name="email" placeholder="Email*">
+                        </div>
+
+                        <div id="phone-field" class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input id="phone" type="tel" name="phone" placeholder="Phone Number*" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+                        </div>
+                        
+                        <div id="trade-field" class="form-group">
+                            <label for="trade">Trade</label>
+                            <select id="trade" name="trade">
+                                <option value="" selected>Trade*</option>
+                                <option>Bell Hanger</option>
+                                <option>Boilermaker</option>
+                                <option>Carpenter</option>
+                                <option>Carpet Layer</option>
+                                <option>Dredger</option>
+                                <option>Electrician</option>
+                                <option>Elevator Mechanic</option>
+                                <option>Fencer</option>
+                                <option>Glazier</option>
+                                <option>Heavy Equipment Operator</option>
+                                <option>HVAC Technician</option>
+                                <option>Insulation Installer</option>
+                                <option>Ironworker</option>
+                                <option>Laborer</option>
+                                <option>Landscaper</option>
+                                <option>Linemen</option>
+                                <option>Mason</option>
+                                <option>Millwright</option>
+                                <option>Painter</option>
+                                <option>Pile Driver</option>
+                                <option>Pipefitter</option>
+                                <option>Plasterer</option>
+                                <option>Plumber</option>
+                                <option>Roofer</option>
+                                <option>Sheet Metal Worker</option>
+                                <option>Sign Display Worker</option>
+                                <option>Steak Fixer</option>
+                                <option>Waterproofer</option>
+                                <option>Welder</option>
+                                <option>Option</option>
+                            </select>
+                        </div>
+
+                        <div id="resume-field" class="form-group drop-accent">
+                            <label for="resume">Resume</label>
+                            <input id="resume" type="file" name="resume">
+                        </div>
+                        
+                        <div id="info-field" class="form-group">
+                            <label for="info">Additional Info</label>
+                            <textarea id="info" name="info" placeholder="Testing to see if placeholder works"></textarea>
+                        </div>
+                        <button id="submit-button" class="primary-button">Submit</button>
+                    </form>
+
+                </div>
             </header>
 
-            <section class="grid-gutter section-container">
-                <h2 class="section-header"><span>OUR MISSION</span></h2>
+            <section class="grid-gutter section-container section-mixed-text">
+                <h2 class="section-header"><span>THE HIRING PROCESS</span></h2>
                 <ol id="mission-statment-u-list" class="section-body">
                     <li>
-                        <h3>Helping You Live Your American Dream</h3>
-                        <p>American Labor Company is committed to helping you live your American Dream, one placement at a time. </p>
+                        <h3>Contact Us</h3>
+                        <p>Apply for jobs using the contact form above. </p>
                     </li>
                     <li>
-                        <h3>Connecting Employees & Employers</h3>
-                        <p>American Labor Company offers career advancing opportunities to qualified candidates and staffing solutions to companies looking to expand their workforce.</p>
+                        <h3>Interview</h3>
+                        <p>Someone from the ALC team will reach out to set up an interview with you.</p>
                     </li>
                     <li>
-                        <h3>Improving Western New York</h3>
-                        <p>Ultimately, American Labor Company seeks to improve Western New York through providing high paying jobs to our community members and essential services to our small businesses. </p>
+                        <h3>Placement</h3>
+                        <p>Following your interview, the ALC team will try to match you to opportunities based on your skillset, credentials, and needs. We will work hard to find a placement that ensures the best fit.</p>
+                    </li>
+                    <li>
+                        <h3>First Day</h3>
+                        <p>Once you are placed at a company, you will begin working full-time. That doesn’t mean your first day will be the last time communicating with ALC. There will be a trial period to ensure you and your employer are satisfied. Throughout the trial period, the ALC team will be in close contact with you.</p>
                     </li>
                 </ol>
             </section>
 
-            <section class="grid-gutter section-container">
-                <h2 class="section-header"><span>OUR MISSION</span></h2>
-                <ol id="mission-statment-u-list" class="section-body">
+            <section class="grid-gutter section-container section-light-text section-dark-background">
+                <h2 class="section-header"><span>EMPLOYEE FREQUENTLY ASKED QUESTIONS</span></h2>
+                <ul class="section-body accordian-container">
                     <li>
-                        <h3>Helping You Live Your American Dream</h3>
-                        <p>American Labor Company is committed to helping you live your American Dream, one placement at a time. </p>
+                        <div class="q-a-row-container accordian-trigger">
+                            <h3>What industries can I find a job in?</h3>
+                            <i id="chevron-icon" class="fas fa-chevron-down"></i>
+                        </div>
+                        <p class="accordian-hidden-element">American Labor Company specializes in placing people in the skilled labor market. We have opportunities for HVAC professionals, electricians, machine operators, plumbers, welders, general laborers and many more!</p>
                     </li>
                     <li>
-                        <h3>Connecting Employees & Employers</h3>
-                        <p>American Labor Company offers career advancing opportunities to qualified candidates and staffing solutions to companies looking to expand their workforce.</p>
+                        <div class="q-a-row-container q-a-border accordian-trigger">
+                            <h3>How long does it take to find a job?</h3>
+                            <i id="chevron-icon" class="fas fa-chevron-down"></i>
+                        </div>
+                        <p class="accordian-hidden-element">It depends. Every trade and company are different and have their own process. Our team will follow up as soon as we receive news to provide you with updates.</p>
                     </li>
                     <li>
-                        <h3>Improving Western New York</h3>
-                        <p>Ultimately, American Labor Company seeks to improve Western New York through providing high paying jobs to our community members and essential services to our small businesses. </p>
+                        <div class="q-a-row-container q-a-border accordian-trigger">
+                            <h3>What happens if I do not like the position?</h3>
+                            <i id="chevron-icon" class="fas fa-chevron-down"></i>
+                        </div>
+                        <p class="accordian-hidden-element">American Labor Company is committed to providing the best match possible. Our partnered companies offer at-will employment; this means that if you are not satisfied with your current position, you are free to walk away at any time. If you wish for another placement, we will work with you to find a better fit.</p>
                     </li>
-                </ol>
+                </ul>
             </section>
 
             <footer id="footer-container"  class="grid-gutter">
