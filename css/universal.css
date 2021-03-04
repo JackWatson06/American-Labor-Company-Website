@@ -31,7 +31,7 @@ body
     padding: 0px;
 
     font-family: 'Roboto', Verdana, sans-serif; 
-    font-size: 110%;
+    font-size: 100%;
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -85,6 +85,16 @@ a
 .display-none
 {
     display: none !important;
+}
+
+
+a.button{
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
+    color: initial;
 }
 
 
@@ -326,7 +336,7 @@ a
 
 .section-header span
 {
-    max-width: 13em;
+    max-width: 10em;
 
     text-overflow: clip;
 }
@@ -873,6 +883,10 @@ a
 /* 1311px - infinity: Laptops*/
 @media (min-width: 82em){    
 
+    body
+    {
+        font-size: 110%;
+    }
 
     h1
     {

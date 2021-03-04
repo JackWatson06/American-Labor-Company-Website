@@ -73,10 +73,6 @@ header
 #submit-button
 {
     grid-area: 5 / 3 / 6 / 4;
-
-    width: 8rem;
-
-    margin: 0 auto;
 }
 
 
