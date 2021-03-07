@@ -2,7 +2,7 @@
 main
 {
     display: grid;
-    grid-template-rows: minmax(22rem, 85vh) auto;
+    grid-template-rows: minmax(65rem, 85vh) auto;
     grid-template-columns: 100%;
 }
 
@@ -33,8 +33,18 @@ header
 #employee-form
 {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(5, 2.5rem);
+
+    --row-size: 2.5rem;
+    grid-template:
+        "name" var(--row-size)
+        "email" var(--row-size)
+        "phone" var(--row-size)
+        "company-name" var(--row-size)
+        "industry" var(--row-size)
+        "company-size" var(--row-size)
+        "info" var(--row-size)
+        "info" var(--row-size)
+        "submit" var(--row-size) / 1fr;
 
     column-gap: 1.5rem;
     row-gap: 1.5rem;
@@ -42,45 +52,45 @@ header
 
 #name-field
 {
-    grid-area: 1 / 1 / 2 / 2;
+    grid-area: name;
 }
 
 #email-field
 {
-    grid-area: 1 / 2 / 2 / 3;
+    grid-area: email;
 }
 
 #phone-field
 {
-    grid-area: 1 / 3 / 2 / 4;
+    grid-area: phone;
 }
 
 
 
 #company-name-field
 {
-    grid-area: 2 / 1 / 3 / 2;
+    grid-area: company-name;
 }
 
 #industry-field
 {
-    grid-area: 2 / 2 / 3 / 3;
+    grid-area: industry;
 }
 
 #company-size-field
 {
-    grid-area: 2 / 3 / 3 / 4;
+    grid-area: company-size;
 }
 
 
 #info-field
 {
-    grid-area: 3 / 1 / 5 / 4;
+    grid-area: info;
 }
 
 #submit-button
 {
-    grid-area: 5 / 3 / 6 / 4;
+    grid-area: submit;
 
     width: 8rem;
 
@@ -154,7 +164,16 @@ header
 
 @media (min-width: 62em ){
 
-
+    #employee-form
+    {
+        --row-size: 2.5rem;
+        grid-template:
+            "name email phone" var(--row-size)
+            "company-name industry company-size" var(--row-size)
+            "info info info" var(--row-size)
+            "info info info" var(--row-size)
+            ". . submit" var(--row-size) / 1fr 1fr 1fr;
+    }
 
 
 }

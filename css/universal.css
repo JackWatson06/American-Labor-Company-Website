@@ -336,7 +336,7 @@ a.button{
 
 .section-header span
 {
-    max-width: 10em;
+    max-width: 45vw;
 
     text-overflow: clip;
 }
@@ -365,7 +365,7 @@ a.button{
 .section-body
 {
     margin: 0 auto;
-    margin-top: 3rem
+    margin-top: 1rem;
 }
 
 .section-body li
@@ -377,7 +377,7 @@ a.button{
 
 .section-body-bottom-margin
 {
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
 }
 
 .section-container
@@ -455,7 +455,7 @@ a.button{
     transform: translateY(-50%);
     left: 1.5rem;
 
-    font-size: 9rem;
+    font-size: 2rem;
     text-align: center;
 
 }
