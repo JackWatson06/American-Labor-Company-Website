@@ -2,7 +2,7 @@
 main
 {
     display: grid;
-    grid-template-rows: minmax(65rem, 85vh) auto;
+    grid-template-rows: minmax(62rem, 85vh) auto;
     grid-template-columns: 100%;
 }
 

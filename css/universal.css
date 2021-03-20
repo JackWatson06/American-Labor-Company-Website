@@ -259,7 +259,9 @@ a.button{
     display: none;
 }
 
-.form-group > *:not(label)
+.form-group > select,
+.form-group > input,
+.form-group > textarea
 {
     width: 100%;
     height: 100%;
@@ -269,6 +271,9 @@ a.button{
 
     color: var(--text-muted);
     background-color: var(--background-primary);
+
+    font-size: 1rem;
+    padding-left: 1em;
 
     resize: none;
 }
@@ -290,16 +295,8 @@ a.button{
     color: var(--text-dark);
 }
 
-.section-mixed-text h1
-{
-    color: var(--primary);
-}
-
-.section-mixed-text h2
-{
-    color: var(--primary);
-}
-
+.section-mixed-text h1,
+.section-mixed-text h2,
 .section-mixed-text h3
 {
     color: var(--primary);
@@ -336,7 +333,7 @@ a.button{
 
 .section-header span
 {
-    max-width: 45vw;
+    max-width: 40vw;
 
     text-overflow: clip;
 }
@@ -354,18 +351,18 @@ a.button{
 
 .section-header:before
 {
-    margin-right: 0.5em;
+    margin-right: 0.75em;
 }
 
 .section-header:after
 {
-    margin-left: 0.5em;
+    margin-left: 0.75em;
 }
 
 .section-body
 {
     margin: 0 auto;
-    margin-top: 1rem;
+    margin-top: 2rem;
 }
 
 .section-body li
@@ -382,11 +379,16 @@ a.button{
 
 .section-container
 {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
 }
 
 
+
+.drop-highlighted
+{
+    border: 3px solid var(--primary) !important;
+}
 
 
 
@@ -415,7 +417,7 @@ a.button{
     flex-direction: row;
     align-items: center;
 
-    height: 10rem;
+    height: 12rem;
 
 }
 
@@ -424,16 +426,14 @@ a.button{
     margin-top: auto;
     margin-bottom: auto;
 
-    margin-left: 1rem;
-
-    width: 70%;
+    width: 75%;
 }
 
 .section-container ol li > h3
 {
     margin: 0;
 
-    width: 20%;
+    width: 25%;
     min-width: 8rem;
 
     text-align: center;
@@ -453,12 +453,27 @@ a.button{
     line-height: 75%;
 
     transform: translateY(-50%);
-    left: 1.5rem;
+    left: 1.75rem;
 
-    font-size: 2rem;
+    font-size: 8rem;
     text-align: center;
 
 }
+
+
+
+
+.select-input
+{
+    position: absolute;
+
+}
+
+.select-group
+{
+    position: relative;
+}
+
 
 
 
@@ -499,6 +514,7 @@ a.button{
 {
     padding: 0 1rem;
 }
+
 
 
 /*******************/
@@ -724,10 +740,16 @@ a.button{
 
     .section-body
     {
-        width: 34rem;
+        width: 30rem;
+    }
+
+    .section-container {
+        padding-top: 7rem;
+        padding-bottom: 7rem;
     }
 
 
+    
 
     /*******************/
     /*   Section Card  */
@@ -880,7 +902,7 @@ a.button{
 
 }
 
-/* 1311px - infinity: Laptops*/
+/* 1311px - infinity: Laptops Large Screens*/
 @media (min-width: 82em){    
 
     body
@@ -914,12 +936,12 @@ a.button{
 
     .section-header 
     {
-        width: 60rem;
+        width: 56rem;
     }
 
     .section-body 
     {
-        width: 45rem;
+        width: 42rem;
     }
 
 }
