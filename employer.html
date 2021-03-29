@@ -161,7 +161,9 @@
 
                     <p class="section-body-bottom-margin">Fill out the form below to let us know how we can help you! We will contact you soon to provide an update. Beneath the form is information on our process and frequently asked questions.</p>
 
-                    <form id="employee-form">
+                    <form id="employee-form" action="/php/proxy.php">
+
+                        <input hidden type="text" name="mode" value="employee">
 
                         <div id="name-field" class="form-group">
                             <label for="name">Full Name</label>
@@ -175,11 +177,9 @@
 
                         <div id="phone-field" class="form-group">
                             <label for="phone">Phone Number</label>
-                            <input id="phone" type="tel" name="phone" placeholder="Phone Number*" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+                            <input id="phone" type="tel" name="phone" placeholder="Phone Number*">
                         </div>
                         
-
-
                         <div id="company-name-field" class="form-group">
                             <label for="company-name">Company Name</label>
                             <input id="company-name" type="text" name="company_name" placeholder="Company Name*">

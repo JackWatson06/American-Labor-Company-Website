@@ -2,7 +2,7 @@
 main
 {
     display: grid;
-    grid-template-rows: minmax(62rem, 85vh) auto;
+    grid-template-rows: minmax(70rem, 85vh) auto;
     grid-template-columns: 100%;
 }
 
@@ -25,7 +25,7 @@ header
     background-image: linear-gradient(
         rgba(0, 0, 0, 0.8), 
         rgba(0, 0, 0, 0.8)
-      ), url("../media/images/png/employee-page-image.png");
+      ), url("../media/images/jpg/employee-page-image.jpg");
     background-position: 80% 50%;
     background-size: cover;
 }
@@ -42,6 +42,9 @@ header
         "phone" var(--row-size)
         "trade" var(--row-size)
         "info" var(--row-size)
+        "info" var(--row-size)
+        "resume" var(--row-size)
+        "resume" var(--row-size)
         "resume" var(--row-size)
         "submit" var(--row-size) / 1fr;
 
