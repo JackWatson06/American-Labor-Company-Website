@@ -2,35 +2,33 @@ import * as mobileNav from "./mobile-nav.js";
 import * as scrolling from "./scrolling.js";
 import * as accordian from "./accordian.js";
 import * as droppable from "./droppable.js";
-import * as select   from "./select.js";
+import * as select    from "./select.js";
+import * as form      from "./form.js";
 
 
-const submitForm = (e, form) => 
+const createJobFormInputs = () => 
 {
-    e.preventDefault();
-
-    let xhr = new XMLHttpRequest();
-    let data = new FormData(form); 
-
-    xhr.open(form.method, form.action, true);
-    xhr.setRequestHeader("Content-type", "multipart/form-data");
-
-    xhr.onload = function() {
-        console.log(this.responseText); // whatever the server returns
+    const userValues = {
+        "name"    : "input|name",
+        "email"   : "input|email",
+        "phone"   : "input|phone",
+        "trade"   : "input|trade",
+        "info"    : "input|info",
+        'role_id' : 2
     }
-    
-    xhr.send(data);
-    
+
+    const documentValues = {
+        "file"                : "file|resume",
+        "user_id"             : "dependent|user.id",
+        "document_usage_id"   : 1,
+    }
+
+    return  { 
+        "user" : userValues, 
+        "document" : documentValues,
+    };
+
 }
-
-
-const assignFormEvent = () =>
-{
-    let form = document.querySelector("#job-form");
-
-    form.addEventListener("submit", (e) => submitForm(e, form));
-}
-
 
 window.onload = (e) =>{
 
@@ -39,7 +37,6 @@ window.onload = (e) =>{
     accordian.accordianSetup();
     droppable.fileDroppableSetup();
     select.selectSetup();
-
-    assignFormEvent();
+    form.formSetup("job-form", createJobFormInputs());
 
 }
