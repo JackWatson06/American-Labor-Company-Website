@@ -9,3 +9,69 @@ main
 {
     margin-top: 4rem;
 }
+
+
+
+
+
+.profile-image-wrapper
+{
+    display: inline-block;
+
+    width: 9rem;
+    height: 13rem;
+
+    margin: 0 2rem;
+
+    text-align: center;
+}
+
+.profile-image-wrapper > img
+{
+    height: 100%; 
+    width: 100%; 
+
+    object-fit: cover;
+    object-position: left top;
+}
+
+.profile-image-wrapper > small
+{
+    text-align: center;
+
+    color: var(--text-muted);
+}
+
+.section-image-container
+{
+    display: flex;
+
+    flex-direction: row;
+    justify-content: center;
+
+    margin: 3rem auto;
+
+}
+
+
+@media (min-width: 46em){
+
+    .profile-image-wrapper 
+    {
+        display: inline-block;
+
+        width: 9rem;
+        height: 13rem;
+
+        margin: 0 3rem;
+    }
+}
+
+@media (min-width: 62em ){
+
+}
+
+
+@media (min-width: 82em){    
+
+}

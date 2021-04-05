@@ -16,6 +16,7 @@ const fileDroppableSetup = () => {
 
     const dropArea = document.querySelector("." + droppableElements.dropArea);
     const removeFile = document.querySelector("." + droppableElements.dropRemove);
+    const fileInput = document.querySelector("." + droppableElements.dropInput);
 
     ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
         dropArea.addEventListener(eventName, preventDefaults, false);
@@ -31,6 +32,7 @@ const fileDroppableSetup = () => {
     });
 
     dropArea.addEventListener('drop', handleDrop, false);
+    fileInput.addEventListener('change', fileButtonUpload);
     removeFile.addEventListener('click', removeFileFromGallary);
 
 }
@@ -46,6 +48,10 @@ const highlightDrop = (e) => {
 
 const unHighlightDrop = (e) => {
     document.querySelector("." + droppableElements.dropHighlight).classList.remove('drop-highlighted');
+}
+
+const fileButtonUpload = (e) => {
+    handleFiles(e.target.files);
 }
 
 const handleDrop = (e) => {

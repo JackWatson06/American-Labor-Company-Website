@@ -123,7 +123,7 @@
             </div>
 
             <ul id="mobile-nav-u-list">
-                <li class="selected grid-gutter">
+                <li class="grid-gutter">
                     <a href="index.html">
                         <h3>
                             Home
@@ -137,7 +137,7 @@
                         </h3>
                     </a>
                 </li>
-                <li class="grid-gutter">
+                <li class="selected grid-gutter">
                     <a href="employee.html">
                         <h3>
                             Find a Job
@@ -159,9 +159,19 @@
             <header class="grid-gutter section-light-text drop-area" >
                 <h2 class="section-header"><span>JOB FORM</span></h2>
 
-                <div class="section-body">
+                <div id="form-success" class="section-body display-none">
+                    <i class="fas fa-check-circle section-success-text"></i>
+                    <p>Congratulations the form was submitted. We sent an email to your inbox to confirm your address. If you did not recieve this email please re-submit the form or reach out to us at info@americanlaborcompany.com</p>
+                    <button class="primary-button" onclick=" location.href='./index.html'; ">Back</button>
+                </div>
+
+                <div id="form-success-hide" class="section-body">
 
                     <p class="section-body-bottom-margin">Fill out the form below to apply for positions with American Labor Company. We will contact you soon to provide an update. The ALC hiring process is entirely free to someone who is seeking employment.  Beneath the form is information on the next steps of the hiring process.</p>
+
+                    <p id="form-error" class="display-none section-error-text">An error occured: <span></span> Please try again! Contact us at <a class="white-link" href="mailto:info@americanlaborcompany.com">info@americanlaborcompany.com</a> if the form is not working.</p>
+
+
 
                     <form id="job-form" action="php/proxy.php" method="post">
 
@@ -181,7 +191,7 @@
                             <label for="phone">Phone Number</label>
                             <input id="phone" type="tel" name="phone" required placeholder="Phone Number *">
                         </div>
-                        
+
                         <div id="trade-field" class="form-group select-group">
                             <label for="trade">Trade</label>
                             <select id="trade" class="js-select-2" multiple="multiple" placeholder="Trade *" name="trade">
@@ -237,7 +247,11 @@
                             <label for="info">Additional Info</label>
                             <textarea id="info" name="info" placeholder="Additional information you want us to know..."></textarea>
                         </div>
-                        <button id="submit-button" class="primary-button">Submit</button>
+                        
+                        <div id="submit-container">
+                            <button id="submit-button" class="primary-button form-button">Submit</button>
+                            <img class="form-loading display-none" src="media/images/svg/spinner.svg" alt="Sending..." />
+                        </div>
                     </form>
 
                 </div>

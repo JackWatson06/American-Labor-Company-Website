@@ -12,6 +12,8 @@
     --text-light: #ffffff;
     --text-muted: #5a5a5a;
     --text-dark: #000000;
+    --text-error: #ff4040;
+    --text-success: #40ff60;
 
     --clear: #00000000;
 }
@@ -291,6 +293,7 @@ a.button{
 .form-group > textarea,
 .form-group > .form-input
 {
+    max-width: 100%;
     width: 100%;
     height: 100%;
 
@@ -307,7 +310,10 @@ a.button{
     resize: none;
 }
 
-
+.form-group > textarea
+{
+    padding-top: 0.5rem;
+}
 
 
 /**************/
@@ -324,6 +330,16 @@ a.button{
 .section-mixed-text
 {
     color: var(--text-dark);
+}
+
+.section-error-text
+{
+    color: var(--text-error);
+}
+
+.section-success-text
+{
+    color: var(--text-success);
 }
 
 .section-mixed-text h1,
@@ -347,6 +363,7 @@ a.button{
 {
     background-color: var(--secondary);
 }
+
 
 
 
@@ -416,11 +433,10 @@ a.button{
 
 .form-input
 {
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
     justify-content: center;
 }
-
 
 .drop-highlighted
 {
@@ -432,6 +448,7 @@ a.button{
 {
     text-align: center;
     padding-right: 1em;
+
 }
 
 .drop-text p
@@ -461,7 +478,15 @@ a.button{
 
 .drop-file
 {
-    word-wrap: break-word;
+    word-break: break-all;
+    white-space: normal;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
 
 /* Refactor
@@ -533,7 +558,6 @@ a.button{
 
 
 
-
 .select-input
 {
     position: absolute;
@@ -571,6 +595,16 @@ a.button{
 
 
 
+
+.loading-spinner
+{
+    width: 3rem;
+    height: 3rem;
+
+    margin: 0 auto;
+
+    display: block;
+}
 
 
 /*******************/

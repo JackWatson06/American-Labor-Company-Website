@@ -121,7 +121,7 @@
             </div>
 
             <ul id="mobile-nav-u-list">
-                <li class="selected grid-gutter">
+                <li class="grid-gutter">
                     <a href="index.html">
                         <h3>
                             Home
@@ -142,7 +142,7 @@
                         </h3>
                     </a>
                 </li>
-                <li class="grid-gutter">  
+                <li class="selected grid-gutter">  
                     <a href="employer.html">
                         <h3>                 
                             Find a Employee
@@ -156,10 +156,18 @@
         <main>
             <header class="grid-gutter section-light-text drop-area" >
                 <h2 class="section-header"><span>FIND EMPLOYEE FORM</span></h2>
+                
+                <div id="form-success" class="section-body display-none">
+                    <i class="fas fa-check-circle section-success-text"></i>
+                    <p>Congratulations the form was submitted. We sent an email to your inbox to confirm your address. If you did not recieve this email please re-submit the form or reach out to us at info@americanlaborcompany.com</p>
+                    <button class="primary-button" onclick=" location.href='./index.html'; ">Back</button>
+                </div>
 
-                <div class="section-body">
+                <div id="form-success-hide" class="section-body">
 
                     <p class="section-body-bottom-margin">Fill out the form below to let us know how we can help you! We will contact you soon to provide an update. Beneath the form is information on our process and frequently asked questions.</p>
+
+                    <p id="form-error" class="display-none section-error-text">An error occured: <span></span> Please try again! Contact us at <a class="white-link" href="mailto:info@americanlaborcompany.com">info@americanlaborcompany.com</a> if the form is not working.</p>
 
                     <form id="employee-form" action="/php/proxy.php">
 
@@ -200,7 +208,10 @@
                             <textarea id="info" name="info" placeholder="Brief description of what you are looking for..."></textarea>
                         </div>
 
-                        <button id="submit-button" class="primary-button">Submit</button>
+                        <div id="submit-container">
+                            <button id="submit-button" class="primary-button form-button">Submit</button>
+                            <img class="form-loading display-none" src="media/images/svg/spinner.svg" alt="Sending..." />
+                        </div>
 
                     </form>
 

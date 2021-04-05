@@ -8,6 +8,12 @@ import * as form      from "./form.js";
 
 const createJobFormInputs = () => 
 {
+
+    // Options for the form input.
+    // Key is the name of the field we need on the server.
+    // Input - stands for input from field,
+    // Dependent - stands for depending on result from previous request.
+
     const userValues = {
         "name"    : "input|name",
         "email"   : "input|email",
@@ -23,9 +29,11 @@ const createJobFormInputs = () =>
         "document_usage_id"   : 1,
     }
 
+    // This specifies two requests, one for user endpoint, one for document enpoint.
+
     return  { 
         "user" : userValues, 
-        "document" : documentValues,
+        "document,file|resume" : documentValues,
     };
 
 }

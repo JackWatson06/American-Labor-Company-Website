@@ -83,16 +83,35 @@ header
     grid-area: info;
 }
 
-#submit-button
+
+#submit-container
 {
     grid-area: submit;
+
+    display: flex;
+    justify-content: center;
+}
+
+#submit-button
+{
     width: 8rem;
-    margin: 0 auto;
+    margin: 0 0;
 }
 
 
 
+#form-success
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
+#form-success i
+{
+    font-size: 5rem;
+}
 
 
 /* Refactor (Move out to universal. Keep some here.)

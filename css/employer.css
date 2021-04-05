@@ -88,13 +88,33 @@ header
     grid-area: info;
 }
 
-#submit-button
+#submit-container
 {
     grid-area: submit;
 
-    width: 8rem;
+    display: flex;
+    justify-content: center;
+}
 
-    margin: 0 auto;
+#submit-button
+{
+    width: 8rem;
+    margin: 0 0;
+}
+
+
+
+#form-success
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#form-success i
+{
+    font-size: 5rem;
 }
 
 
