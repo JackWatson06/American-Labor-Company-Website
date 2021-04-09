@@ -639,6 +639,16 @@ a.button{
     object-fit: cover;
 }
 
+.card-img-top
+{
+    object-position: center top;
+}
+
+.card-imag-bottom
+{
+    object-position: center bottom;
+}
+
 .section-card-text-container
 {
     padding: 0 1rem;
@@ -1007,7 +1017,7 @@ a.button{
 
     .section-card-container img
     {
-        width: 45%;
+        width: 40%;
     }
 
     .right-card-container 
