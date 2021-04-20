@@ -53,7 +53,7 @@ function postRequest($endpoint, $data)
 
     if(curl_errno($ch))
     {
-        echo "Error with proxy server. Could not load data! Please reach out to bugs.americanlaborcompany@gmail.com. We apologize for the inconvenience.";
+        returnErrorFromProxy("Could not load data! Please reach out to bugs.americanlaborcompany@gmail.com. We apologize for the inconvenience.");
     }
     else
     {
@@ -95,9 +95,14 @@ function routeIfPostParamExists()
     }
     else
     {
-
+        returnErrorFromProxy("No URL mode selected!");
     }
 
+}
+
+function returnErrorFromProxy(string $message)
+{
+    echo "ERROR: " . $message;
 }
 
 
