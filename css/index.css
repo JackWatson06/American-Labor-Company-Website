@@ -85,7 +85,7 @@ header button
 
 @media (min-width: 62em ){
 
-    .section-card-container
+    .sec-card-container
     {
         height: 20rem;
     }

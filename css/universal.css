@@ -15,6 +15,8 @@
     --text-error: #ff4040;
     --text-success: #40ff60;
 
+    --form-select: #4d94ff;
+
     --clear: #00000000;
 }
 
@@ -73,6 +75,35 @@ a
     text-decoration: inherit;
 }
 
+
+section
+{
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+
+
+.display-none
+{
+    display: none !important;
+}
+
+
+
+/*********************/
+/*       Links       */
+/*********************/
+
+a.button{
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
+    color: initial;
+}
+
 .white-link
 {
     color: var(--text-light);
@@ -85,23 +116,14 @@ a
     text-decoration: underline;
 }
 
-.display-none
-{
-    display: none !important;
-}
 
 
-a.button{
-    -webkit-appearance: button;
-    -moz-appearance: button;
-    appearance: button;
 
-    text-decoration: none;
-    color: initial;
-}
+/*********************/
+/*     Buttons       */
+/*********************/
 
-
-.primary-button
+.primary-btn
 {
     padding: 0.75rem 1.25rem;
 
@@ -117,7 +139,7 @@ a.button{
     transition: transform 0.25s ease-out;
 }
 
-.primary-button:hover
+.primary-btn:hover
 {
     cursor: pointer;
 
@@ -125,7 +147,7 @@ a.button{
 }
 
 
-.secondary-button
+.secondary-btn
 {
     padding: 0.25em 0.75em;
 
@@ -140,7 +162,7 @@ a.button{
     transition: transform 0.25s ease-out;
 }
 
-.secondary-button:hover
+.secondary-btn:hover
 {
     cursor: pointer;
 
@@ -161,7 +183,8 @@ a.button{
     transform: scale(1.2);
 }
 
-.grid-gutter
+
+.page-margin
 {
     width: 100%;
 
@@ -171,9 +194,9 @@ a.button{
 
 
 
-/*********************/
-/* Mobile Navigation */
-/*********************/
+/**********************/
+/* Desktop Navigation */
+/**********************/
 
 .nav-alc-logo
 {
@@ -189,15 +212,22 @@ a.button{
     background-position: top left !important;
 }
 
+#nav-container
+{
+    display: none;
+}
+
+
+
+
+/*********************/
+/* Mobile Navigation */
+/*********************/
+
 .mobile-nav-icon
 {
     font-size: 2rem;
     margin-right: 1rem;
-}
-
-#nav-container
-{
-    display: none;
 }
 
 #mobile-nav-container
@@ -283,9 +313,24 @@ a.button{
 }
 
 
+
+
+/*********************/
+/*      Form         */
+/*********************/
+
+
+/* === Generic form components === */
 .form-group > label
 {
     display: none;
+}
+
+.form-input
+{
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .form-group > select,
@@ -298,7 +343,8 @@ a.button{
     height: 100%;
 
     border: 1px solid var(--text-muted);
-    border-radius: 10px;
+    border-radius: 4px;
+    transition: border 0.15s linear, box-shadow 0.15s linear;
 
     color: var(--text-muted);
     background-color: var(--background-primary);
@@ -310,137 +356,35 @@ a.button{
     resize: none;
 }
 
+.form-group > select:hover,
+.form-group > input:hover,
+.form-group > textarea:hover,
+.form-group > .form-input:hover
+{
+    box-shadow: 0 0 0px 1px var(--form-select);
+    border: 1px solid var(--form-select);
+}
+
+.form-group > select:focus,
+.form-group > input:focus,
+.form-group > textarea:focus,
+.form-group > .form-input:focus
+{
+    border: 1px solid var(--form-select);
+}
+
 .form-group > textarea
 {
     padding-top: 0.5rem;
 }
 
 
-/**************/
-/*   Section  */
-/**************/
 
-
-
-.section-light-text
-{
-    color: var(--text-light);
-}
-
-.section-mixed-text
-{
-    color: var(--text-dark);
-}
-
-.section-error-text
-{
-    color: var(--text-error);
-}
-
-.section-success-text
-{
-    color: var(--text-success);
-}
-
-.section-mixed-text h1,
-.section-mixed-text h2,
-.section-mixed-text h3
-{
-    color: var(--primary);
-}
-
-.section-light-background
-{
-    background-color: var(--background-primary);
-}
-
-.section-grey-background
-{
-    background-color: var(--background-secondary);
-}
-
-.section-dark-background
-{
-    background-color: var(--secondary);
-}
-
-
-
-
-.section-header
-{
-    width: 100%;
-    max-width: 100%;
-
-    display: flex;
-
-    margin: 0 auto;
-
-    text-align: center;
-}
-
-.section-header span
-{
-    max-width: 40vw;
-
-    text-overflow: clip;
-}
-
-.section-header:before, .section-header:after 
-{
-    content: '';
-
-    flex: 1;
-
-    margin: auto 0;
-
-    border-bottom: solid 1px;
-}
-
-.section-header:before
-{
-    margin-right: 0.75em;
-}
-
-.section-header:after
-{
-    margin-left: 0.75em;
-}
-
-.section-body
-{
-    margin: 0 auto;
-    margin-top: 2rem;
-}
-
-.section-body li
-{
-    margin-top: 3rem;
-}
-
-.section-body-bottom-margin
-{
-    margin-bottom: 3rem;
-}
-
-.section-container
-{
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-}
-
-
-
-.form-input
-{
-    display: inline-flex;
-    flex-direction: column;
-    justify-content: center;
-}
+/* === Dropbox for file === */
 
 .drop-highlighted
 {
-    border: 4px solid #4d94ff !important;
+    border: 4px solid var(--form-select) !important;
 }
 
 .drop-text,
@@ -470,7 +414,6 @@ a.button{
     cursor: pointer;
 }
 
-
 .drop-gallery i
 {
     font-size: 2rem;
@@ -489,75 +432,11 @@ a.button{
     -webkit-box-orient: vertical;
 }
 
-/* Refactor
-   |
-  \ / */
-
-.section-container ol
-{
-    counter-reset: step-counter;
-    display: flex;
-    flex-direction: column;
-
-    padding: 0;
-}
-
-.section-container ol li
-{
-    counter-increment: step-counter;
-    position: relative;
-    z-index: -1;
-    list-style-type: none;
-
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-
-    height: 12rem;
-
-}
-
-.section-container ol li p
-{
-    margin-top: auto;
-    margin-bottom: auto;
-
-    width: 75%;
-}
-
-.section-container ol li > h3
-{
-    margin: 0;
-
-    width: 25%;
-    min-width: 8rem;
-
-    text-align: center;
-
-    background-color: var(--background-primary);
-}
 
 
-.section-container ol li::before
-{    
-    content: counter(step-counter);
-    color: var(--primary-transparent);
-
-    position: absolute;
-
-    top: 50%;
-    line-height: 75%;
-
-    transform: translateY(-50%);
-    left: 3rem;
-
-    font-size: 8rem;
-    text-align: center;
-
-}
-
-
-
+/* === Select2 Box Styling ===
+ - This allows us to make the dropbox for select2 look like the
+    other form fields that we have. See (https://select2.org/) */
 .select-input
 {
     position: absolute;
@@ -571,7 +450,7 @@ a.button{
 
 .select2-container--default .select2-selection--multiple
 {
-    border-radius: 10px !important;
+    border-radius: 5px !important;
     padding-top: 5px ;
     height: 100%;
 }
@@ -594,8 +473,7 @@ a.button{
 
 
 
-
-
+/* === Spinner === */
 .loading-spinner
 {
     width: 3rem;
@@ -607,11 +485,193 @@ a.button{
 }
 
 
-/*******************/
-/*   Section Card  */
-/*******************/
 
-.section-card-container
+/**************/
+/*   Section  */
+/**************/
+
+
+/* === Section Colors === */
+
+.sec-light-text
+{
+    color: var(--text-light);
+}
+
+.sec-mixed-text
+{
+    color: var(--text-dark);
+}
+
+.sec-error-text
+{
+    color: var(--text-error);
+}
+
+.sec-success-text
+{
+    color: var(--text-success);
+}
+
+.sec-mixed-text h1,
+.sec-mixed-text h2,
+.sec-mixed-text h3
+{
+    color: var(--primary);
+}
+
+.sec-light-background
+{
+    background-color: var(--background-primary);
+}
+
+.sec-grey-background
+{
+    background-color: var(--background-secondary);
+}
+
+.sec-dark-background
+{
+    background-color: var(--secondary);
+}
+
+
+
+/* === Section Title === */
+
+.sec-title
+{
+    width: 100%;
+    max-width: 100%;
+
+    display: flex;
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+.sec-title span
+{
+    max-width: 40vw;
+
+    text-overflow: clip;
+}
+
+.sec-title:before, .sec-title:after 
+{
+    content: '';
+
+    flex: 1;
+
+    margin: auto 0;
+
+    border-bottom: solid 1px;
+}
+
+.sec-title:before
+{
+    margin-right: 0.75em;
+}
+
+.sec-title:after
+{
+    margin-left: 0.75em;
+}
+
+.sec-body
+{
+    margin: 0 auto;
+    margin-top: 2rem;
+}
+
+.sec-body li
+{
+    margin-top: 3rem;
+}
+
+.sec-body-bottom-margin
+{
+    margin-bottom: 3rem;
+}
+
+
+
+
+
+
+
+/* === Big Numbered List === */
+
+.big-list
+{
+    counter-reset: step-counter;
+    display: flex;
+    flex-direction: column;
+
+    padding: 0;
+}
+
+.big-list li
+{
+    counter-increment: step-counter;
+    position: relative;
+    z-index: -1;
+    list-style-type: none;
+    margin: 0;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    height: 15.5rem;
+
+}
+
+.big-list p
+{
+    margin-top: auto;
+    margin-bottom: auto;
+
+    width: 85%;
+}
+
+.big-list li > h3
+{
+    margin: 0;
+
+    width: 15%;
+    min-width: 8rem;
+
+    text-align: center;
+
+    background-color: var(--background-primary);
+}
+
+
+.big-list li::before
+{    
+    content: counter(step-counter);
+    color: var(--primary-transparent);
+
+    position: absolute;
+
+    top: 50%;
+    line-height: 75%;
+
+    transform: translateY(-50%);
+    left: 2rem;
+
+    font-size: 8rem;
+    text-align: center;
+
+}
+
+
+
+/* === Section Card === */
+
+.sec-card-container
 {
     padding-bottom: 2rem;
 
@@ -622,21 +682,26 @@ a.button{
     border-radius: 0.3rem;
 }
 
-.top-section-card
-{
-    margin-top: 0;
-}
-
-.bottom-section-card
-{
-    margin-bottom: 0;
-}
-
-.section-card-container img
+.sec-card-container img
 {
     width: 100%;
 
     object-fit: cover;
+}
+
+.sec-card-text-container
+{
+    padding: 0 1rem;
+}
+
+.sec-card-top
+{
+    margin-top: 0;
+}
+
+.sec-card-bottom
+{
+    margin-bottom: 0;
 }
 
 .card-img-top
@@ -649,10 +714,7 @@ a.button{
     object-position: center bottom;
 }
 
-.section-card-text-container
-{
-    padding: 0 1rem;
-}
+
 
 
 
@@ -746,7 +808,7 @@ a.button{
 /* 736px - 991px: Tablets, and small laptops*/
 @media (min-width: 46em){
 
-    .grid-gutter
+    .page-margin
     {
         width: 100%;
     
@@ -757,6 +819,12 @@ a.button{
     /**********************/
     /* Desktop Navigation */
     /**********************/
+
+    .nav-underline
+    {
+        border-bottom: 1px solid var(--text-light);
+        padding-bottom: 5px;
+    }
 
     #mobile-nav-container,
     #mobile-nav-menu-container
@@ -863,27 +931,27 @@ a.button{
     /*   Section  */
     /**************/
     
-    .section-header
+    .sec-title
     {
         width: 38rem;
     }
 
-    .section-header:before
+    .sec-title:before
     {
         margin-right: 1em;
     }
 
-    .section-header:after
+    .sec-title:after
     {
         margin-left: 1em;
     }
 
-    .section-body
+    .sec-body
     {
         width: 30rem;
     }
 
-    .section-container {
+    .sec-container {
         padding-top: 7rem;
         padding-bottom: 7rem;
     }
@@ -891,11 +959,10 @@ a.button{
 
     
 
-    /*******************/
-    /*   Section Card  */
-    /*******************/
 
-    .section-card-container
+    /* === Section Card === */
+
+    .sec-card-container
     {
         width: 34rem;
         
@@ -903,16 +970,23 @@ a.button{
         margin-right: auto;
     }
 
-    .section-card-container img
+    .sec-card-container img
     {
         width: 100%;
     }
 
-    .section-card-text-container
+    .sec-card-text-container
     {
         padding: 0 3rem;
     }
 
+
+    /* === Big Numbered List === */
+
+    .big-list li
+    {
+        height: 12rem;
+    }
 
 
     /*******************/
@@ -1006,7 +1080,7 @@ a.button{
     /*   Section Card  */
     /*******************/
 
-    .section-card-container 
+    .sec-card-container 
     {
         width: 100%;
 
@@ -1015,7 +1089,7 @@ a.button{
         padding-bottom: 0;
     }
 
-    .section-card-container img
+    .sec-card-container img
     {
         width: 40%;
     }
@@ -1025,7 +1099,7 @@ a.button{
         flex-direction: row-reverse;
     }
 
-    .section-card-text-container
+    .sec-card-text-container
     {
         display: flex;
         
@@ -1035,7 +1109,7 @@ a.button{
 
     }
 
-    .section-card-text-container p
+    .sec-card-text-container p
     {
         margin: 0;
     }
@@ -1060,12 +1134,12 @@ a.button{
         font-size: 2rem;
     }
 
-    .section-card-container 
+    .sec-card-container 
     {
         width: 80%;
     }
 
-    .section-card-text-container
+    .sec-card-text-container
     {
         padding: 0 7vw;
     }
@@ -1074,12 +1148,12 @@ a.button{
         margin-left: 2rem;
     }
 
-    .section-header 
+    .sec-title 
     {
         width: 56rem;
     }
 
-    .section-body 
+    .sec-body 
     {
         width: 42rem;
     }

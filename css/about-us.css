@@ -42,7 +42,7 @@ main
     color: var(--text-muted);
 }
 
-.section-image-container
+.sec-image-container
 {
     display: flex;
 
