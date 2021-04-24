@@ -7,21 +7,22 @@ main
 
 #about-us-container
 {
-    margin-top: 4rem;
+    margin-top: 2rem;
 }
 
 
 
 
 
-.profile-image-wrapper
-{
+
+
+.profile-image-wrapper {
     display: inline-block;
 
-    width: 9rem;
-    height: 13rem;
+    width: 8rem;
+    height: 10rem;
 
-    margin: 0 2rem;
+    margin: 0 1rem;
 
     text-align: center;
 }

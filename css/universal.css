@@ -42,6 +42,10 @@ body
     -moz-osx-font-smoothing: grayscale;
 }
 
+p{
+    line-height: 1.6rem;
+}
+
 ul
 {
     padding: 0;
@@ -74,14 +78,6 @@ a
     color: inherit;
     text-decoration: inherit;
 }
-
-
-section
-{
-    padding-top: 7rem;
-    padding-bottom: 7rem;
-}
-
 
 
 .display-none
@@ -488,6 +484,14 @@ a.button{
 /*   Section  */
 /**************/
 
+
+section
+{
+    padding-top: 9rem;
+    padding-bottom: 9rem;
+}
+
+
 /* === Section Colors === */
 .sec-light-text
 {
@@ -548,7 +552,7 @@ a.button{
 
 .sec-title span
 {
-    max-width: 40vw;
+    max-width: 6em;
 
     text-overflow: clip;
 }
@@ -574,6 +578,9 @@ a.button{
     margin-left: 0.75em;
 }
 
+
+
+/* === Section Body === */
 .sec-body
 {
     margin: 0 auto;
@@ -585,13 +592,15 @@ a.button{
     margin-top: 3rem;
 }
 
-.sec-body-bottom-margin
+.sec-body-bot-marg
 {
     margin-bottom: 3rem;
 }
 
-
-
+.sec-body-bot-marg-l
+{
+    margin-bottom: 10rem;
+}
 
 
 
@@ -610,38 +619,13 @@ a.button{
 {
     counter-increment: step-counter;
     position: relative;
+
     z-index: -1;
     list-style-type: none;
-    margin: 0;
 
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-
-    height: 15.5rem;
+    margin: 0 0 3.5rem 5rem;
 
 }
-
-.big-list p
-{
-    margin-top: auto;
-    margin-bottom: auto;
-
-    width: 85%;
-}
-
-.big-list li > h3
-{
-    margin: 0;
-
-    width: 15%;
-    min-width: 8rem;
-
-    text-align: center;
-
-    background-color: var(--background-primary);
-}
-
 
 .big-list li::before
 {    
@@ -650,13 +634,9 @@ a.button{
 
     position: absolute;
 
-    top: 50%;
-    line-height: 75%;
+    left: -5rem;
 
-    transform: translateY(-50%);
-    left: 2rem;
-
-    font-size: 8rem;
+    font-size: 6rem;
     text-align: center;
 
 }
@@ -702,9 +682,9 @@ a.button{
     object-position: center top;
 }
 
-.card-imag-bottom
+.card-img-bottom
 {
-    object-position: center bottom;
+    object-position: center top;
 }
 
 
@@ -945,8 +925,14 @@ a.button{
     }
 
     .sec-container {
-        padding-top: 7rem;
-        padding-bottom: 7rem;
+        padding-top: 9rem;
+        padding-bottom: 9rem;
+    }
+
+
+    .sec-title span
+    {
+        max-width: 12em;
     }
 
 
@@ -1138,7 +1124,7 @@ a.button{
     }
 
     #nav-left-u-list h3 {
-        margin-left: 2rem;
+        margin-left: 1rem;
     }
 
     .sec-title 
