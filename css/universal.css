@@ -361,14 +361,6 @@ a.button{
     border: 1px solid var(--form-select);
 }
 
-.form-group > select:focus,
-.form-group > input:focus,
-.form-group > textarea:focus,
-.form-group > .form-input:focus
-{
-    border: 1px solid var(--form-select);
-}
-
 .form-group > textarea
 {
     padding-top: 0.5rem;
@@ -446,8 +438,16 @@ a.button{
 .select2-container--default .select2-selection--multiple
 {
     border-radius: 5px !important;
+    transition: border 0.15s linear, box-shadow 0.15s linear;
+
     padding-top: 5px ;
     height: 100%;
+}
+
+.select2-container--default .select2-selection--multiple:hover
+{
+    box-shadow: 0 0 0px 1px var(--form-select);
+    border: 1px solid var(--form-select);
 }
 
 .select2-container .select2-search--inline .select2-search__field
@@ -460,6 +460,7 @@ a.button{
     color: var(--text-muted);
 
     margin-left: 1em !important;
+    margin-top: 3px !important;
 }
 
 .select2-container{

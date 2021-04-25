@@ -6,10 +6,10 @@ main
     grid-template-columns: 100%;
 }
 
+
 /**************/
 /*   Header   */
 /**************/
-
 header
 {
     height: 100%;
@@ -183,6 +183,11 @@ header
 
 
 @media (min-width: 62em ){
+
+    main
+    {
+        grid-template-rows: minmax(45rem, 85vh) auto;
+    }
 
     #employee-form
     {

@@ -1,10 +1,10 @@
 
 
 const accordianElements = {
-    accordianClass        : "accordian-container",
-    accordianHiddenElement    : "accordian-hidden-element",
-    accordianTriggerClass : "accordian-trigger",
-    accordianOpenClass    : "accordian-open"
+    accordianClass         : "accordian-container",
+    accordianHiddenElement : "accordian-hidden-element",
+    accordianTriggerClass  : "accordian-trigger",
+    accordianOpenClass     : "accordian-open"
 }
 
 const accordianSetup = (e) => {
