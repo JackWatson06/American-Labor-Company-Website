@@ -1,6 +1,6 @@
 import * as mobileNav from "./mobile-nav.js";
 import * as scrolling from "./scrolling.js";
-import * as accordian from "./accordian.js";
+import * as inputMask from "./input-mask.js";
 import * as form      from "./form.js";
 
 const createJobFormInputs = () => 
@@ -37,7 +37,7 @@ window.onload = (e) =>{
 
     mobileNav.mobileNavigationMenuSetup();
     scrolling.navigationChangeColorOnScrollSetup();
-    accordian.accordianSetup();
+    inputMask.inputMaskSetup();
     form.formSetup("employee-form", createJobFormInputs());
 
 }

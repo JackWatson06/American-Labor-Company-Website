@@ -24,10 +24,10 @@ header
     color: var(--text-light);
 
     background-image: linear-gradient(
-        rgba(0, 0, 0, 0.9), 
-        rgba(0, 0, 0, 0.9)
+        rgba(0, 0, 0, 0.8), 
+        rgba(0, 0, 0, 0.8)
       ), url("../media/images/jpg/company.jpg");
-    background-position: 111% 35%;
+    background-position: center center;
     background-size: cover;
 }
 

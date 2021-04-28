@@ -14,10 +14,10 @@
         <link rel="stylesheet" href="./css/universal.css">
         <link rel="stylesheet" href="./css/employer.css">
         <link rel="icon" href="./media/images/svg/logo.svg">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />        
 
+        <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
         <script src="./src/employer.js" type="module"></script>
-        <script src="https://kit.fontawesome.com/afc1b18350.js" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
 
     </head>
 
@@ -62,22 +62,22 @@
 
                 <!-- Social Links -->
                 <li>
-                    <a href="https://www.linkedin.com/in/jack-watson-46ab71196/">
+                    <a href="https://www.linkedin.com/company/american-labor-company/about/">
                         <img class="social-media-svg" src="media/images/svg/linkedin.svg" alt="LinkedIn"  />
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.instagram.com/">
+                    <a href="https://www.instagram.com/americanlaborcompany/">
                         <img class="social-media-svg" src="media/images/svg/instagram.svg" alt="Instagram"  />
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.facebook.com/">
+                    <a href="https://www.facebook.com/AmericanLaborCompany/">
                         <img class="social-media-svg" src="media/images/svg/facebook.svg" alt="Facebook"  />
                     </a>
                 </li>
                 <li>
-                    <a href="https://twitter.com/?lang=en">
+                    <a href="https://twitter.com/AmericanLaborCo">
                         <img class="social-media-svg" src="media/images/svg/twitter.svg" alt="Twitter" />
                     </a>
                 </li>
@@ -98,22 +98,22 @@
             <div id="mobile-nav-socials-container" class="page-margin">
                 <ul>
                     <li>
-                        <a href="https://www.linkedin.com/in/jack-watson-46ab71196/">
+                        <a href="https://www.linkedin.com/company/american-labor-company/about/">
                             <img class="social-media-svg" src="media/images/svg/linkedin_blue.svg" alt="LinkedIn"  />
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.instagram.com/">
+                        <a href="https://www.instagram.com/americanlaborcompany/">
                             <img class="social-media-svg" src="media/images/svg/instagram_blue.svg" alt="Instagram"  />
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.facebook.com/">
+                        <a href="https://www.facebook.com/AmericanLaborCompany/">
                             <img class="social-media-svg" src="media/images/svg/facebook_blue.svg" alt="Facebook"  />
                         </a>
                     </li>
                     <li>
-                        <a href="https://twitter.com/?lang=en">
+                        <a href="https://twitter.com/AmericanLaborCo">
                             <img class="social-media-svg" src="media/images/svg/twitter_blue.svg" alt="Twitter" />
                         </a>
                     </li>
@@ -218,7 +218,7 @@
                 </div>
             </header>
 
-            <section class="page-margin sec-mixed-text">
+            <section class="section-first page-margin sec-mixed-text">
                 <h2 class="sec-title"><span>TALENT SEARCH PROCESS</span></h2>
                 <ol id="mission-statment-u-list" class="sec-body big-list">
                     <li>
@@ -244,39 +244,29 @@
                 <h2 class="sec-title"><span>EMPLOYER FREQUENTLY ASKED QUESTIONS</span></h2>
                 <ul class="sec-body accordian-container">
                     <li>
-                        <div class="q-a-row-container accordian-trigger">
-                            <h3>Where do we source our talent from?</h3>
-                            <i id="chevron-icon" class="fas fa-chevron-down"></i>
-                        </div>
-                        <p class="accordian-hidden-element">We scour high and low to find you the best candidates. Our talentpool has a diverse background. Our candidates backgrounds include recent graduates from local vocational schools, candidates who have experience in the trades but are looking for a new employer, and motivated individuals entering the trades for their first time.</p>
+                        <input id="accordian-box-one" class="accordian-input" type="checkbox">
+                        <label for="accordian-box-one" class="accordian-label"><h3>Where do we source our talent from?</h3></label>
+                        <p class="accordian-hidden">We scour high and low to find you the best candidates. Our talentpool has a diverse background. Our candidates backgrounds include recent graduates from local vocational schools, candidates who have experience in the trades but are looking for a new employer, and motivated individuals entering the trades for their first time.</p>
                     </li>
-                    <li>
-                        <div class="q-a-row-container q-a-border accordian-trigger">
-                            <h3>What industries do you specialize in?</h3>
-                            <i id="chevron-icon" class="fas fa-chevron-down"></i>
-                        </div>
-                        <p class="accordian-hidden-element">American Labor Company specializes in placing people in the skilled labor market. More specifically, we help companies find HVAC professionals, electricians, machine operators, plumbers, welders, general laborers and other positions.</p>
+                    <li class="accordian-border">
+                        <input id="accordian-box-two" class="accordian-input" type="checkbox">
+                        <label for="accordian-box-two" class="accordian-label"><h3>What industries do you specialize in?</h3></label>
+                        <p class="accordian-hidden">American Labor Company specializes in placing people in the skilled labor market. More specifically, we help companies find HVAC professionals, electricians, machine operators, plumbers, welders, general laborers and other positions.</p>
                     </li>
-                    <li>
-                        <div class="q-a-row-container q-a-border accordian-trigger">
-                            <h3>How long does it take to find employees?</h3>
-                            <i id="chevron-icon" class="fas fa-chevron-down"></i>
-                        </div>
-                        <p class="accordian-hidden-element">There will be a time period between our meeting and placement. The reason for this wait is that we want to provide you with the best fit possible.</p>
+                    <li class="accordian-border">
+                        <input id="accordian-box-three" class="accordian-input" type="checkbox">
+                        <label for="accordian-box-three" class="accordian-label"><h3>How long does it take to find employees?</h3></label>
+                        <p class="accordian-hidden">There will be a time period between our meeting and placement. The reason for this wait is that we want to provide you with the best fit possible.</p>
                     </li>
-                    <li>
-                        <div class="q-a-row-container q-a-border accordian-trigger">
-                            <h3>What happens if the employee is not working out?</h3>
-                            <i id="chevron-icon" class="fas fa-chevron-down"></i>
-                        </div>
-                        <p class="accordian-hidden-element">American Labor Company is committed to providing the best match possible. For this reason, we encourage our partnered companies to hire at-will. This means that if you are not satisfied with your employee, you can walk away anytime.</p>
+                    <li class="accordian-border">
+                        <input id="accordian-box-four" class="accordian-input" type="checkbox">
+                        <label for="accordian-box-four" class="accordian-label"><h3>What happens if the employee is not working out?</h3></label>
+                        <p class="accordian-hidden">American Labor Company is committed to providing the best match possible. For this reason, we encourage our partnered companies to hire at-will. This means that if you are not satisfied with your employee, you can walk away anytime.</p>
                     </li>
-                    <li>
-                        <div class="q-a-row-container q-a-border accordian-trigger">
-                            <h3>How much does your service cost?</h3>
-                            <i id="chevron-icon" class="fas fa-chevron-down"></i>
-                        </div>
-                        <p class="accordian-hidden-element">American Labor Company firmly believes that companies should not pay a dime unless they are satisfied with our service. If you onboard an ALC recommended employee and you decide to walk away within the first 30 days, you will not be charged a placement fee.</p>
+                    <li class="accordian-border">
+                        <input id="accordian-box-five" class="accordian-input" type="checkbox">
+                        <label for="accordian-box-five" class="accordian-label"><h3>How much does your service cost?</h3></label>
+                        <p class="accordian-hidden">American Labor Company firmly believes that companies should not pay a dime unless they are satisfied with our service. If you onboard an ALC recommended employee and you decide to walk away within the first 30 days, you will not be charged a placement fee.</p>
                     </li>
                 </ul>
             </section>
@@ -338,45 +328,43 @@
                             <address class="footer-socials-container socials-hover-container">
                                 <ul>
                                     <li>
-                                        <a href="https://www.linkedin.com/in/jack-watson-46ab71196/">
+                                        <a href="https://www.linkedin.com/company/american-labor-company/">
                                             <img class="social-media-svg" src="media/images/svg/linkedin.svg" alt="LinkedIn"  />
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="https://www.instagram.com/">
+                                        <a href="https://www.instagram.com/americanlaborcompany/">
                                             <img class="social-media-svg" src="media/images/svg/instagram.svg" alt="Instagram"  />
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="https://www.facebook.com/">
+                                        <a href="https://www.facebook.com/AmericanLaborCompany/">
                                             <img class="social-media-svg" src="media/images/svg/facebook.svg" alt="Facebook"  />
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="https://twitter.com/?lang=en">
+                                        <a href="https://twitter.com/AmericanLaborCo">
                                             <img class="social-media-svg" src="media/images/svg/twitter.svg" alt="Twitter" />
                                         </a>
                                     </li>
                                 </ul>
-                                <p>Follow our adventure to transform American spirit!</p>
                             </address>
                         </div>
                     </div>
                     <div id="footer-right-column">
                         <address class="footer-location-container">
                             <p><u><b>Buffalo Headquarters</b></u></p>
-                            <p>102 Roycroft Circle</p>
+                            <p>P.O. Box 353</p>
                             <p>East Aurora, NY</p>
-                            <p>14052, PO Box 5</p>
                             <br>
-                            <p>Phone: <a class="white-link" href="tel:716-771-8154">716-771-8154</a></p>
+                            <p>Phone: <a class="white-link" href="tel:716-886-9628">(716) 886-9628</a></p>
                             <p>Email: <a class="white-link" href="mailto:info@americanlaborcompany.com">info@americanlaborcompany.com</a></p>
                         </address>
                     </div>
                     
                 </div>
 
-                <p id="copyright-text">Ⓒ 2020 American Labor Company. All rights reserved.</p>
+                <p id="copyright-text">Ⓒ 2021 American Labor Company. All rights reserved.</p>
             </footer>
         </main>
 
