@@ -161,7 +161,7 @@
 
                 <div id="form-success" class="sec-body display-none">
                     <i class="fas fa-check-circle sec-success-text"></i>
-                    <p>Congratulations the form was submitted. We sent an email to your inbox to confirm your address. If you did not recieve this email please re-submit the form or reach out to us at info@americanlaborcompany.com</p>
+                    <p>Congratulations the form was submitted. We will reach out to you shortly through phone, or email to provide an update. The first step towards your new position has been completed!</p>
                     <button class="primary-btn" onclick=" location.href='./index.html'; ">Back</button>
                 </div>
 
@@ -171,28 +171,26 @@
 
                     <p id="form-error" class="display-none sec-error-text">An error occured: <span></span> Please try again! Contact us at <a class="white-link" href="mailto:info@americanlaborcompany.com">info@americanlaborcompany.com</a> if the form is not working.</p>
 
-                    <form id="job-form" action="php/proxy.php" method="post">
-
-                        <input hidden type="text" name="mode" value="employee">
+                    <form id="job-form" action="https://a80214f66014.ngrok.io" method="post">
 
                         <div id="name-field" class="form-group">
                             <label for="name">Full Name</label>
-                            <input id="name" type="text" name="name" required placeholder="Name *">
+                            <input id="name" type="text" name="user_name" required placeholder="Name *">
                         </div>
 
                         <div id="email-field" class="form-group">
                             <label for="email">Email</label>
-                            <input id="email" type="email" name="email" required placeholder="Email *">
+                            <input id="email" type="email" name="user_email" required placeholder="Email *">
                         </div>
 
                         <div id="phone-field" class="form-group">
                             <label for="phone">Phone Number</label>
-                            <input id="phone" type="tel" name="phone" required placeholder="Phone Number *">
+                            <input id="phone" type="tel" name="user_phone" required placeholder="Phone Number *">
                         </div>
 
                         <div id="trade-field" class="form-group select-group">
                             <label for="trade">Trade</label>
-                            <select id="trade" class="js-select-2" multiple="multiple" placeholder="Trade *" name="trade">
+                            <select id="trade" class="js-select-2" multiple="multiple" placeholder="Trade *" name="user_trade">
                                 <option>Bell Hanger</option>
                                 <option>Boilermaker</option>
                                 <option>Carpenter</option>
@@ -237,13 +235,17 @@
                                     <p class="drop-file">File Uploaded</p>
                                     <button class="drop-remove secondary-btn">Remove</button>
                                 </div>
-                                <input id="resume" class="drop-input" type="file" name="resume" hidden>
+                                <input id="resume" class="drop-input" type="file" name="document_file" hidden>
                             </div>
                         </div>
+
+                        <input hidden type="text" name="document_document_usage_id" value="1">
+                        <input hidden type="text" name="user_role_id" value="1">
+
                         
                         <div id="info-field" class="form-group">
                             <label for="info">Additional Info</label>
-                            <textarea id="info" name="info" placeholder="Additional information you want us to know..."></textarea>
+                            <textarea id="info" name="user_info" placeholder="Additional information you want us to know..."></textarea>
                         </div>
                         
                         <div id="submit-container">

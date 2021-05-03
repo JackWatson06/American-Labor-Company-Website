@@ -13,29 +13,29 @@ const createJobFormInputs = () =>
     // Key is the name of the field we need on the server.
     // Input - stands for input from field,
     // Dependent - stands for depending on result from previous request.
+    const name = document.querySelector("#name").value;
+    const email = document.querySelector("#email").value;
+    const phone = document.querySelector("#phone").value;
+    const trade = document.querySelector("#trade").value;
+    const info = document.querySelector("#info").value;
+    const resume = document.querySelector("#resume").files[0];
 
-    const userValues = {
-        "name"    : "input|name",
-        "email"   : "input|email",
-        "phone"   : "input|phone",
-        "trade"   : "input|trade",
-        "info"    : "input|info",
-        'role_id' : 2
+    let postData = {
+        "user_name"    : name,
+        "user_email"   : email,
+        "user_phone"   : phone,
+        "user_trade"   : trade,
+        "user_role_id" : 2
     }
 
-    const documentValues = {
-        "file"                : "file|resume",
-        "user_id"             : "dependent|user.id",
-        "document_usage_id"   : 1,
-    }
+    if(info != "" && info != null) postData["user_info"] = info;
+    if(resume != "" && resume != null)
+    {
+        postData["document_file"] = resume;
+        postData["document_document_usage_id"] = 1;
+    } 
 
-    // This specifies two requests, one for user endpoint, one for document enpoint.
-
-    return  { 
-        "user" : userValues, 
-        "document,file|resume" : documentValues,
-    };
-
+    return postData;
 }
 
 window.onload = (e) =>{
@@ -45,6 +45,6 @@ window.onload = (e) =>{
     droppable.fileDroppableSetup();
     select.selectSetup();
     inputMask.inputMaskSetup();
-    form.formSetup("job-form", createJobFormInputs());
+    form.formSetup("job-form", createJobFormInputs, "api/worker");
 
 }
