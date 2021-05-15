@@ -1,15 +1,17 @@
 
+@import "universal.css";
+
 main
 {
     display: grid;
-    grid-template-rows: minmax(75rem, 85vh) auto;
+    grid-template-rows: minmax(70rem, 85vh) auto;
     grid-template-columns: 100%;
 }
+
 
 /**************/
 /*   Header   */
 /**************/
-
 header
 {
     height: 100%;
@@ -25,13 +27,12 @@ header
     background-image: linear-gradient(
         rgba(0, 0, 0, 0.8), 
         rgba(0, 0, 0, 0.8)
-      ), url("../media/images/jpg/employee-page-image.jpg");
-    background-position: 15% 50%;
+      ), url("../../assests/images/jpg/employer-page-image.jpg");
+    background-position: center center;
     background-size: cover;
 }
 
-
-#job-form
+#employee-form
 {
     display: grid;
 
@@ -40,12 +41,11 @@ header
         "name" var(--row-size)
         "email" var(--row-size)
         "phone" var(--row-size)
-        "trade" var(--row-size)
+        "company-name" var(--row-size)
+        "industry" var(--row-size)
+        "company-size" var(--row-size)
         "info" var(--row-size)
         "info" var(--row-size)
-        "resume" var(--row-size)
-        "resume" var(--row-size)
-        "resume" var(--row-size)
         "submit" var(--row-size) / 1fr;
 
     column-gap: 1.5rem;
@@ -68,21 +68,27 @@ header
 }
 
 
-#trade-field
+
+#company-name-field
 {
-    grid-area:  trade;
+    grid-area: company-name;
 }
 
-#resume-field
+#industry-field
 {
-    grid-area: resume;
+    grid-area: industry;
 }
+
+#company-size-field
+{
+    grid-area: company-size;
+}
+
 
 #info-field
 {
     grid-area: info;
 }
-
 
 #submit-container
 {
@@ -97,6 +103,8 @@ header
     width: 8rem;
     margin: 0 0;
 }
+
+
 
 #form-success
 {
@@ -119,9 +127,7 @@ header
         background-image: linear-gradient(
             rgba(0, 0, 0, 0.9), 
             rgba(0, 0, 0, 0.9)
-        ), url("../media/images/jpg/employee-page-image.jpg");
-        background-position: center center;
-        background-size: cover;
+        ), url("../../assests/images/jpg/employer-page-image.jpg");
     }
 
 }
@@ -134,16 +140,17 @@ header
         grid-template-rows: minmax(45rem, 85vh) auto;
     }
 
-    #job-form
+    #employee-form
     {
         --row-size: 2.5rem;
         grid-template:
             "name email phone" var(--row-size)
-            "trade trade resume" var(--row-size)
-            "info info resume" var(--row-size)
-            "info info resume" var(--row-size)
+            "company-name industry company-size" var(--row-size)
+            "info info info" var(--row-size)
+            "info info info" var(--row-size)
             ". . submit" var(--row-size) / 1fr 1fr 1fr;
     }
+
 
 }
 

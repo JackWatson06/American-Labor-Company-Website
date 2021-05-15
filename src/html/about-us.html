@@ -10,24 +10,20 @@
 
         <title> American Labor Company </title>
 
-        <link rel="stylesheet" href="./css/font.css">
-        <link rel="stylesheet" href="./css/universal.css">
-        <link rel="stylesheet" href="./css/index.css">
-        <link rel="icon" href="./media/images/svg/logo.svg">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />        
-
-        <script src="./src/index.js" type="module"></script>
+        <link rel="icon" href="../../assests/images/svg/logo.svg">
+        <link rel="stylesheet" href="../css/about-us.css" />
 
     </head>
 
     <body>
 
-        <nav id="nav-container" class="page-margin">
+        <!-- Desktop Navigation -->
+        <nav id="nav-container" class="page-margin nav-bar-scrolling">
             <ul id="nav-left-u-list">
                 <!-- Logo -->
                 <li> 
                     <a href="/">
-                        <img id="nav-alc-logo" src="./media/images/svg/logo.svg" alt="ALC">
+                        <img id="nav-alc-logo" src="../../assests/images/svg/logo.svg" alt="ALC">
                         <h3 id="nav-company-name-header">American Labor Company</h3>
                     </a>
                 </li>
@@ -36,7 +32,7 @@
             <ul id="nav-middle-u-list">
                 <!-- Navigation Buttons -->
                 <li>
-                    <a href="about-us">
+                    <a class="nav-underline" href="about-us">
                         About Us
                     </a>
                 </li>
@@ -53,33 +49,40 @@
             </ul>
 
             <ul id="nav-right-u-list" class="socials-hover-container">
+                <!-- Contact Information -->
+                <li id="nav-contact-info-container">
+                    <a href="tel:716-771-8154">P: 716-771-8154</a>
+                    <a href="mailto:info@americanlaborcompany.com">E: info@americanlaborcompany.com</a>
+                </li>
+
                 <!-- Social Links -->
                 <li>
                     <a href="https://www.linkedin.com/company/american-labor-company/about/">
-                        <img class="social-media-svg" src="media/images/svg/linkedin.svg" alt="LinkedIn"  />
+                        <img class="social-media-svg" src="../../assests/images/svg/linkedin.svg" alt="LinkedIn"  />
                     </a>
                 </li>
                 <li>
                     <a href="https://www.instagram.com/americanlaborcompany/">
-                        <img class="social-media-svg" src="media/images/svg/instagram.svg" alt="Instagram"  />
+                        <img class="social-media-svg" src="../../assests/images/svg/instagram.svg" alt="Instagram"  />
                     </a>
                 </li>
                 <li>
                     <a href="https://www.facebook.com/AmericanLaborCompany/">
-                        <img class="social-media-svg" src="media/images/svg/facebook.svg" alt="Facebook"  />
+                        <img class="social-media-svg" src="../../assests/images/svg/facebook.svg" alt="Facebook"  />
                     </a>
                 </li>
                 <li>
                     <a href="https://twitter.com/AmericanLaborCo">
-                        <img class="social-media-svg" src="media/images/svg/twitter.svg" alt="Twitter" />
+                        <img class="social-media-svg" src="../../assests/images/svg/twitter.svg" alt="Twitter" />
                     </a>
                 </li>
             </ul>
         </nav>
 
-        <nav id="mobile-nav-container">
+        <!-- Mobile Navigation -->
+        <nav id="mobile-nav-container" class="nav-bar-scrolling">
 
-            <img class="nav-alc-logo" src="./media/images/svg/logo.svg" alt="ALC">
+            <img class="nav-alc-logo" src="../../assests/images/svg/logo.svg" alt="ALC">
             <h3 class="nav-company-name-header">American Labor Company</h3>
 
             <i id="hamburger-icon" class="mobile-nav-icon fas fa-bars"></i>
@@ -92,36 +95,36 @@
                 <ul>
                     <li>
                         <a href="https://www.linkedin.com/company/american-labor-company/about/">
-                            <img class="social-media-svg" src="media/images/svg/linkedin_blue.svg" alt="LinkedIn"  />
+                            <img class="social-media-svg" src="../../assests/images/svg/linkedin_blue.svg" alt="LinkedIn"  />
                         </a>
                     </li>
                     <li>
                         <a href="https://www.instagram.com/americanlaborcompany/">
-                            <img class="social-media-svg" src="media/images/svg/instagram_blue.svg" alt="Instagram"  />
+                            <img class="social-media-svg" src="../../assests/images/svg/instagram_blue.svg" alt="Instagram"  />
                         </a>
                     </li>
                     <li>
                         <a href="https://www.facebook.com/AmericanLaborCompany/">
-                            <img class="social-media-svg" src="media/images/svg/facebook_blue.svg" alt="Facebook"  />
+                            <img class="social-media-svg" src="../../assests/images/svg/facebook_blue.svg" alt="Facebook"  />
                         </a>
                     </li>
                     <li>
                         <a href="https://twitter.com/AmericanLaborCo">
-                            <img class="social-media-svg" src="media/images/svg/twitter_blue.svg" alt="Twitter" />
+                            <img class="social-media-svg" src="../../assests/images/svg/twitter_blue.svg" alt="Twitter" />
                         </a>
                     </li>
                 </ul>
             </div>
 
             <ul id="mobile-nav-u-list">
-                <li class="selected page-margin">
+                <li class="page-margin">
                     <a href="/">
                         <h3>
                             Home
                         </h3>
                     </a>
                 </li>
-                <li class="page-margin">
+                <li class="selected page-margin">
                     <a href="about-us">
                         <h3>
                             About Us
@@ -147,58 +150,23 @@
         </div>
 
         <main>
-            <header class="page-margin" >
-                <h1>The American Dream,<br> One Placement at a Time</h1>
-                <button class="primary-btn" onclick="location.href='./employee';">Find a Job</button>
-                <button class="primary-btn" onclick="location.href='./employer';">Find Employees</button>
-            </header>
-
-            <section class="section-first page-margin sec-mixed-text">
-                <h2 class="sec-title"><span>OUR MISSION</span></h2>
-                <ul id="mission-statment-u-list" class="sec-body">
-                    <li>
-                        <h3>Helping You Live Your American Dream</h3>
-                        <p>American Labor Company is committed to helping you live your American Dream, one placement at a time. </p>
-                    </li>
-                    <li>
-                        <h3>Connecting Employees & Employers</h3>
-                        <p>American Labor Company offers career advancing opportunities to qualified candidates and staffing solutions to companies looking to expand their workforce.</p>
-                    </li>
-                    <li>
-                        <h3>Improving Western New York</h3>
-                        <p>Ultimately, American Labor Company seeks to improve Western New York through providing high paying jobs to our community members and essential services to our small businesses. </p>
-                    </li>
-                </ul>
-            </section>
-
-            <section id="find-jobs-container" class="page-margin">
-
-                <div class="sec-card-container sec-card-top">
-                    <img class="card-img-top" src="./media/images/jpg/worker.jpg">
-                    <div class="sec-card-text-container">
-                        <h3>Find a Job</h3>
-                        <p>Whether you are an expert in your trade or are a hardworking individual who is eager to learn, American Labor Company has a home for you. Apply now and let the ALC team try to match you with one of our partnered companies.</p>
-                        <button class="primary-btn" onclick=" location.href='./employee'; ">Apply Now</button>
+            <section id="about-us-container" class="sec-mixed-text page-margin">
+                <h2 class="sec-title"><span>THE AMERICAN DREAM</span></h2>
+                <p class="sec-body sec-body-bot-marg-l">At American Labor Company, every business decision we make is rooted in the American Dream. We founded this company to provide hardworking people a platform to elevate their status and to improve their financial situation, for themselves and for their loved ones. If you believe that through hard work, dedication, and determination you can improve your quality of life: you have found a home with ALC. In recent years, society has devalued the concept of using your hands to provide meaningful work. In today’s digital age full of social media businesses, AI, and automation we believe that the American Dream is more important than ever. American Labor Company was founded to let people know that there is another option. Not everyone has to go to a university to be successful. In fact, many folks within the trades will outearn their college educated peers while saving themselves the time it takes to complete a college degree and the debt associated with it. If you want a rewarding career that will transform your quality of life, American Labor Company is here to help.</p>
+                <h2 class="sec-title"><span>THE TEAM</span></h2>
+                <div class="sec-body">
+                    <div class="sec-image-container">
+                        <div class="profile-image-wrapper">
+                            <img src="../../assests/images/jpg/matt_image.jpg" alt="Matt Morgan" />
+                            <small><i>Matt Morgan</i></small>
+                        </div>
+                        <div class="profile-image-wrapper">
+                            <img src="../../assests/images/jpg/jack_image.jpg" alt="Jack Watson" />
+                            <small><i>Jack Watson</i></small>
+                        </div>
                     </div>
+                    <p>Matt & Jack are childhood friends who graduated together from East Aurora High School. They have had an entrepreneurial spirit since they were children. Matt began investing in the stock market and studying business at a young age while Jack began programming different applications and video game modifications. During college, the two synergized their talents and decided to team up to tackle the supply and demand gap that exists within the trades. Matt & Jack are committed to utilizing their skill sets to provide as many employment opportunities to people as they can.</p>
                 </div>
-
-                <div class="right-card-container sec-card-container sec-card-bottom">
-                    <img class="card-img-bottom" src="./media/images/jpg/front-page-image.jpg">
-                    <div class="sec-card-text-container">
-                        <h3>Find Employees</h3>
-                        <p>American Labor Company offers skilled labor recruiting and placement solutions for a variety of industries. Whether you are looking for an experienced project manager, an entry-level laborer, or anyone in between, American Labor Company has you covered. </p>
-                        <button class="primary-btn" onclick=" location.href='./employer'; ">Contact Us</button>
-                    </div>
-                </div>
-
-            </section>
-
-            <section class="page-margin sec-mixed-text">
-                <h2 class="sec-title"><span>WHY WORK WITH ALC</span></h2>
-                <p class="sec-body sec-body-bot-marg-l">Our team goes beyond resumes and job descriptions to proactively match candidates with companies based on personalities and tailored requirements from both parties. Whether you are an employer or an employee, the ALC team is excited to sit down with you and determine your specific needs. To get started, reach out to us today!</p>
-                <a id="slogan-container" class="primary-link" href="about-us">
-                    <h1>The American Dream, One Placement at a Time</h1>
-                </a>
             </section>
 
             <footer id="footer-container"  class="page-margin">
@@ -208,29 +176,29 @@
                         <ul>
                             <li>
                                 <a href="https://www.linkedin.com/company/american-labor-company/">
-                                    <img class="social-media-svg" src="media/images/svg/linkedin.svg" alt="LinkedIn"  />
+                                    <img class="social-media-svg" src="../../assests/images/svg/linkedin.svg" alt="LinkedIn"  />
                                 </a>
                             </li>
                             <li>
                                 <a href="https://www.instagram.com/americanlaborcompany/">
-                                    <img class="social-media-svg" src="media/images/svg/instagram.svg" alt="Instagram"  />
+                                    <img class="social-media-svg" src="../../assests/images/svg/instagram.svg" alt="Instagram"  />
                                 </a>
                             </li>
                             <li>
                                 <a href="https://www.facebook.com/AmericanLaborCompany/">
-                                    <img class="social-media-svg" src="media/images/svg/facebook.svg" alt="Facebook"  />
+                                    <img class="social-media-svg" src="../../assests/images/svg/facebook.svg" alt="Facebook"  />
                                 </a>
                             </li>
                             <li>
                                 <a href="https://twitter.com/AmericanLaborCo">
-                                    <img class="social-media-svg" src="media/images/svg/twitter.svg" alt="Twitter" />
+                                    <img class="social-media-svg" src="../../assests/images/svg/twitter.svg" alt="Twitter" />
                                 </a>
                             </li>
                         </ul>
                     </address>
 
                     <div class="footer-row-container">
-                        <img class='footer-logo' src="media/images/svg/logo_word.svg" />
+                        <img class='footer-logo' src="../../assests/images/svg/logo_word.svg" />
                         <address class="footer-location-container">
                             <p><u><b>Buffalo Headquarters</b></u></p>
                             <p>P.O. Box 353</p>
@@ -252,27 +220,27 @@
 
                     <div id="footer-left-column">
                         <div class="footer-inline-wrapper">
-                            <img class='footer-logo' src="media/images/svg/logo_word.svg" />
+                            <img class='footer-logo' src="../../assests/images/svg/logo_word.svg" />
                             <address class="footer-socials-container socials-hover-container">
                                 <ul>
                                     <li>
                                         <a href="https://www.linkedin.com/company/american-labor-company/">
-                                            <img class="social-media-svg" src="media/images/svg/linkedin.svg" alt="LinkedIn"  />
+                                            <img class="social-media-svg" src="../../assests/images/svg/linkedin.svg" alt="LinkedIn"  />
                                         </a>
                                     </li>
                                     <li>
                                         <a href="https://www.instagram.com/americanlaborcompany/">
-                                            <img class="social-media-svg" src="media/images/svg/instagram.svg" alt="Instagram"  />
+                                            <img class="social-media-svg" src="../../assests/images/svg/instagram.svg" alt="Instagram"  />
                                         </a>
                                     </li>
                                     <li>
                                         <a href="https://www.facebook.com/AmericanLaborCompany/">
-                                            <img class="social-media-svg" src="media/images/svg/facebook.svg" alt="Facebook"  />
+                                            <img class="social-media-svg" src="../../assests/images/svg/facebook.svg" alt="Facebook"  />
                                         </a>
                                     </li>
                                     <li>
                                         <a href="https://twitter.com/AmericanLaborCo">
-                                            <img class="social-media-svg" src="media/images/svg/twitter.svg" alt="Twitter" />
+                                            <img class="social-media-svg" src="../../assests/images/svg/twitter.svg" alt="Twitter" />
                                         </a>
                                     </li>
                                 </ul>

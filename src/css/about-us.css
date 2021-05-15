@@ -1,3 +1,7 @@
+
+@import "universal.css";
+
+
 main
 {
     display: grid;
@@ -9,11 +13,6 @@ main
 {
     margin-top: 2rem;
 }
-
-
-
-
-
 
 
 .profile-image-wrapper {

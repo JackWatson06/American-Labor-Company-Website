@@ -1,10 +1,10 @@
+
+const jquery = requrie('jquery');
+
 import * as mobileNav from "./mobile-nav.js";
 import * as scrolling from "./scrolling.js";
-import * as droppable from "./droppable.js";
 import * as inputMask from "./input-mask.js";
-import * as select    from "./select.js";
 import * as form      from "./form.js";
-
 
 const createJobFormInputs = () => 
 {
@@ -16,24 +16,22 @@ const createJobFormInputs = () =>
     const name = document.querySelector("#name").value;
     const email = document.querySelector("#email").value;
     const phone = document.querySelector("#phone").value;
-    const trade = document.querySelector("#trade").value;
+    const companyName = document.querySelector("#company-name").value;
+    const industry = document.querySelector("#industry").value;
+    const companySize = document.querySelector("#company-size").value;
     const info = document.querySelector("#info").value;
-    const resume = document.querySelector("#resume").files[0];
 
     let postData = {
-        "user_name"    : name,
-        "user_email"   : email,
-        "user_phone"   : phone,
-        "user_trade"   : trade,
-        "user_role_id" : 2
+        "user_name"        : name,
+        "user_email"       : email,
+        "user_phone"       : phone,
+        "company_name"     : companyName,
+        "company_industry" : industry,
+        "user_role_id"     : 3
     }
 
-    if(info != "" && info != null) postData["user_info"] = info;
-    if(resume != "" && resume != null)
-    {
-        postData["document_file"] = resume;
-        postData["document_document_usage_id"] = 1;
-    } 
+    if(info != "" && info != null) postData["company_info"] = info;
+    if(companySize != "" && companySize != null) postData["company_size"] = companySize;
 
     return postData;
 }
@@ -42,9 +40,7 @@ window.onload = (e) =>{
 
     mobileNav.mobileNavigationMenuSetup();
     scrolling.navigationChangeColorOnScrollSetup();
-    droppable.fileDroppableSetup();
-    select.selectSetup();
     inputMask.inputMaskSetup();
-    form.formSetup("job-form", createJobFormInputs, "api/worker");
+    form.formSetup("employee-form", createJobFormInputs, "api/employer");
 
 }
