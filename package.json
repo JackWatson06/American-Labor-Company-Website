@@ -24,6 +24,8 @@
     "file-loader": "^6.2.0",
     "html-loader": "^2.1.2",
     "html-webpack-plugin": "^5.3.1",
+    "http-server": "^0.12.3",
+    "image-minimizer-webpack-plugin": "^2.2.0",
     "mini-css-extract-plugin": "^1.6.0",
     "style-loader": "^2.0.0",
     "terser-webpack-plugin": "^5.1.2",

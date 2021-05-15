@@ -6,35 +6,34 @@ const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
 module.exports = {
   mode: 'production',
-  entry: {
-    'index': path.resolve(__dirname, 'src/js/index.js'),
-    'employee': path.resolve(__dirname, 'src/js/employee.js'),
-    'employer': path.resolve(__dirname, 'src/js/employer.js'),
-    'about-us': path.resolve(__dirname, 'src/js/about-us.js')
-  },
   output: {
     path: path.resolve(__dirname, 'public'),
+    clean: true,
   },
   plugins: [
     new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: path.resolve(__dirname, 'src/html/index.html'),
+      hash: true,
       chunks: ['index']
     }),
     new HtmlWebpackPlugin({
       filename: 'employee.html',
       template: path.resolve(__dirname, 'src/html/employee.html'),
+      hash: true,
       chunks: ['employee']
     }),
     new HtmlWebpackPlugin({
       filename: 'employer.html',
       template: path.resolve(__dirname, 'src/html/employer.html'),
+      hash: true,
       chunks: ['employer']
     }),
     new HtmlWebpackPlugin({
       filename: 'about-us.html',
       template: path.resolve(__dirname, 'src/html/about-us.html'),
+      hash: true,
       chunks: ['about-us']
     })
   ],
@@ -42,7 +41,7 @@ module.exports = {
     rules: [
       {
         test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader']
+        use: ['css-loader'],
       },
       {
         test: /\.(html)$/,
@@ -50,15 +49,7 @@ module.exports = {
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
-        use: [
-          {
-            loader: 'url-loader',
-            options: {
-              name: '[name].[ext]',
-              outputPath: 'media/'
-            }
-          }
-        ]
+        loader: 'file-loader',
       },
       {
         test: /\.(ttf)$/,
@@ -85,7 +76,6 @@ module.exports = {
         },
         extractComments: false,
       }),
-      new CssMinimizerPlugin(),
     ],
   }
 };
