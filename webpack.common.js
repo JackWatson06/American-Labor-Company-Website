@@ -31,6 +31,11 @@ module.exports = {
         {
           from: 'links/*',
           context: path.resolve(__dirname, 'src/php')
+        },
+        {
+          from: "*",
+          context: path.resolve(__dirname, 'assests/emails'),
+          to: "media/emails",
         }
       ]
     }),
