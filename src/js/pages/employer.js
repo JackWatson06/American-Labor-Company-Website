@@ -7,7 +7,7 @@ import * as scrolling from "../components/scrolling.js";
 import * as inputMask from "../components/input-mask.js";
 import * as form      from "../components/form.js";
 
-const createJobFormInputs = () => 
+const createEmployerFormInputs = () => 
 {
 
     // Options for the form input.
@@ -42,6 +42,6 @@ window.onload = (e) =>{
     mobileNav.mobileNavigationMenuSetup();
     scrolling.navigationChangeColorOnScrollSetup();
     inputMask.inputMaskSetup();
-    form.formSetup("employee-form", createJobFormInputs, "api/employer");
+    form.formSetup("employer-form", createEmployerFormInputs, "api/employer");
 
 }

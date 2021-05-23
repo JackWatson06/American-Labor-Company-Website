@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "docker-up": "npm run build && docker build -t alc-web . && docker run --rm -d -p 8080:80 --name alc-web-running alc-web",
+    "docker-enter": "docker exec -it alc-web-running /bin/bash",
     "docker-down": "docker stop alc-web-running",
     "start": "webpack serve --open --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js"
