@@ -1,10 +1,11 @@
 
+const css = require("../../css/employer.css");
 const jquery = requrie('jquery');
 
-import * as mobileNav from "./mobile-nav.js";
-import * as scrolling from "./scrolling.js";
-import * as inputMask from "./input-mask.js";
-import * as form      from "./form.js";
+import * as mobileNav from "../components/mobile-nav.js";
+import * as scrolling from "../components/scrolling.js";
+import * as inputMask from "../components/input-mask.js";
+import * as form      from "../components/form.js";
 
 const createJobFormInputs = () => 
 {

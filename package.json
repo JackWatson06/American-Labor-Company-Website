@@ -5,7 +5,10 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack"
+    "docker-up": "npm run build && docker build -t alc-web . && docker run --rm -d -p 8080:80 --name alc-web-running alc-web",
+    "docker-down": "docker stop alc-web-running",
+    "start": "webpack serve --open --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js"
   },
   "repository": {
     "type": "git",
@@ -19,8 +22,11 @@
   },
   "homepage": "https://github.com/JackWatson06/American-Labor-Company-Website#readme",
   "devDependencies": {
+    "copy-webpack-plugin": "^9.0.0",
     "css-loader": "^5.2.4",
     "css-minimizer-webpack-plugin": "^3.0.0",
+    "expose-loader": "^3.0.0",
+    "extract-loader": "^5.1.0",
     "file-loader": "^6.2.0",
     "html-loader": "^2.1.2",
     "html-webpack-plugin": "^5.3.1",
@@ -31,7 +37,9 @@
     "terser-webpack-plugin": "^5.1.2",
     "url-loader": "^4.1.1",
     "webpack": "^5.37.0",
-    "webpack-cli": "^4.7.0"
+    "webpack-cli": "^4.7.0",
+    "webpack-dev-server": "^3.11.2",
+    "webpack-merge": "^5.7.3"
   },
   "dependencies": {
     "jquery": "^3.6.0",

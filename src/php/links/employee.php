@@ -1,7 +1,8 @@
 <?php
     header("Location: https://americanlaborcompany.com/employee");
 
-    $filePath = getcwd() . "/employee_count.txt";
+    $rootPath = $_SERVER['DOCUMENT_ROOT'];
+    $filePath = $rootPath . "/../log/employee_count.txt";
     $file = @fopen($filePath, "c+");
 
     //File loaded

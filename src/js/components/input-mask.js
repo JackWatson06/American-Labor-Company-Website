@@ -1,4 +1,4 @@
-import * as maskedInput from "./lib/maskedInput.js";
+import * as maskedInput from "../lib/maskedInput.js";
 
 const inputMaskSetup = () => {
 

@@ -1,2 +1,7 @@
 /log
+
+# We will run npm install on the server.
 /node_modules
+
+# We will run npm build production on the server.
+/dist

@@ -1,13 +1,13 @@
 
-const jquery = requrie('jquery');
+const css = require("../../css/employee.css");
 const select2 = require('select2');
 
-import * as mobileNav from "./mobile-nav.js";
-import * as scrolling from "./scrolling.js";
-import * as droppable from "./droppable.js";
-import * as inputMask from "./input-mask.js";
-import * as select    from "./select.js";
-import * as form      from "./form.js";
+import * as mobileNav from "../components/mobile-nav.js";
+import * as scrolling from "../components/scrolling.js";
+import * as droppable from "../components/droppable.js";
+import * as inputMask from "../components/input-mask.js";
+import * as select    from "../components/select.js";
+import * as form      from "../components/form.js";
 
 
 const createJobFormInputs = () => 
