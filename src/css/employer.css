@@ -32,7 +32,7 @@ header
     background-size: cover;
 }
 
-#employee-form
+#find-employee-form
 {
     display: grid;
 
@@ -140,7 +140,7 @@ header
         grid-template-rows: minmax(45rem, 85vh) auto;
     }
 
-    #employee-form
+    #find-employee-form
     {
         --row-size: 2.5rem;
         grid-template:

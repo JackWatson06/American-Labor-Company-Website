@@ -1,6 +1,5 @@
 
 const css = require("../../css/employer.css");
-const jquery = requrie('jquery');
 
 import * as mobileNav from "../components/mobile-nav.js";
 import * as scrolling from "../components/scrolling.js";
@@ -42,6 +41,6 @@ window.onload = (e) =>{
     mobileNav.mobileNavigationMenuSetup();
     scrolling.navigationChangeColorOnScrollSetup();
     inputMask.inputMaskSetup();
-    form.formSetup("employer-form", createEmployerFormInputs, "api/employer");
+    form.formSetup("find-employee-form", createEmployerFormInputs, "api/employer");
 
 }
