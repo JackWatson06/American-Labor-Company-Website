@@ -1,13 +1,10 @@
 
 @import "universal.css";
 
-body
-{
-    height: 100%;
-}
-
 main
 {
+    min-height: 100%;
+
     display: grid;
     grid-template-rows: auto;
     grid-template-columns: 100%;
