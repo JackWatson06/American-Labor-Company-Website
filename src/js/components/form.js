@@ -1,8 +1,8 @@
 
 let formElements = {
-    formSuccess       : document.querySelector("#form-success"),
-    formError         : document.querySelector("#form-error"),
-    formSuccessHide   : document.querySelector("#form-success-hide"),
+    formSuccess       : document.querySelector(".js-form-success"),
+    formError         : document.querySelector(".js-form-error"),
+    formSuccessHide   : document.querySelector(".js-form-success-hide"),
 }
 
 
@@ -109,8 +109,8 @@ const createFormData = (postData) =>
 const setFormElements = (form) => 
 {
     formElements.form = form;
-    formElements.formButton = form.querySelector(".form-button");
-    formElements.formLoading = form.querySelector(".form-loading");
+    formElements.formButton = form.querySelector(".js-form-button");
+    formElements.formLoading = form.querySelector(".js-form-loading");
 };
 
 
