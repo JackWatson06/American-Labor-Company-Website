@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "docker-build": "docker build -t alc-web .",
-    "docker-up": "docker run --rm -dit --name alc-web-running -p 8080:80 -v $PWD/dist:/var/www/html/dist alc-web && npm run watch",
+    "docker-up": "docker run --rm -dit --name alc-web-running -p 8700:80 -v $PWD/dist:/var/www/html/dist alc-web && npm run watch",
     "docker-enter": "docker exec -it alc-web-running /bin/bash",
     "docker-down": "docker stop alc-web-running",
     "watch": "webpack --config webpack.dev.js",
