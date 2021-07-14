@@ -12,7 +12,6 @@ main
 /**************/
 /*   Header   */
 /**************/
-
 header
 {
     height: 100%;
@@ -34,30 +33,40 @@ header
 }
 
 
+/*****************/
+/*  Job Form    */
+/****************/
 #job-form
 {
     display: grid;
 
     --row-size: 2.5rem;
     grid-template:
-        "name" var(--row-size)
-        "email" var(--row-size)
-        "phone" var(--row-size)
-        "trade" var(--row-size)
-        "info" var(--row-size)
-        "info" var(--row-size)
-        "resume" var(--row-size)
-        "resume" var(--row-size)
-        "resume" var(--row-size)
-        "submit" var(--row-size) / 1fr;
+        "fname lname" var(--row-size)
+        "email email" var(--row-size)
+        "phone phone" var(--row-size)
+        "city state" var(--row-size)
+        "trade trade" var(--row-size)
+        "resume resume" var(--row-size)
+        "resume resume" var(--row-size)
+        "resume resume" var(--row-size)
+        "info info" var(--row-size)
+        "info info" var(--row-size)
+        "submit submit" var(--row-size) / 1fr;
+    grid-template-columns: 50% 50%;
 
-    column-gap: 1.5rem;
+    column-gap: 0.5rem;
     row-gap: 1.5rem;
 }
 
-#name-field
+#fname-field
 {
-    grid-area: name;
+    grid-area: fname;
+}
+
+#lname-field
+{
+    grid-area: lname;
 }
 
 #email-field
@@ -70,6 +79,15 @@ header
     grid-area: phone;
 }
 
+#city-field
+{
+    grid-area: city;
+}
+
+#state-field
+{
+    grid-area: state;
+}
 
 #trade-field
 {
@@ -86,37 +104,12 @@ header
     grid-area: info;
 }
 
-
-#submit-container
+/*****************/
+/* Media Queries */
+/*****************/
+/* 736px - 991px: Tablets, and small laptops*/
+@media (min-width: 46em)
 {
-    grid-area: submit;
-
-    display: flex;
-    justify-content: center;
-}
-
-#submit-button
-{
-    width: 8rem;
-    margin: 0 0;
-}
-
-#form-success
-{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-#form-success i
-{
-    font-size: 5rem;
-}
-
-
-@media (min-width: 46em){
-
     header
     {
         background-image: linear-gradient(
@@ -126,31 +119,14 @@ header
         background-position: center center;
         background-size: cover;
     }
-
 }
 
-
-@media (min-width: 62em ){
-
-    main
-    {
-        grid-template-rows: minmax(45rem, 85vh) auto;
-    }
-
-    #job-form
-    {
-        --row-size: 2.5rem;
-        grid-template:
-            "name email phone" var(--row-size)
-            "trade trade resume" var(--row-size)
-            "info info resume" var(--row-size)
-            "info info resume" var(--row-size)
-            ". . submit" var(--row-size) / 1fr 1fr 1fr;
-    }
-
+/* 992px - 1311px: Laptops*/
+@media (min-width: 62em )
+{
 }
 
-
-@media (min-width: 82em){    
-
+/* 1311px - infinity: Laptops Large Screens*/
+@media (min-width: 82em)
+{    
 }

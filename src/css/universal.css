@@ -2,6 +2,9 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
 @import "font.css";
 
+/*********************/
+/*  Global Colors    */
+/*********************/
 :root
 {
     --primary: #2B2E76;
@@ -24,6 +27,10 @@
     --clear: #00000000;
 }
 
+
+/************************/
+/*  Default Settings    */
+/************************/
 *, *:after, *:before {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -83,18 +90,15 @@ a
     text-decoration: inherit;
 }
 
-
 .display-none
 {
     display: none !important;
 }
 
 
-
 /*********************/
 /*       Links       */
 /*********************/
-
 a.button{
     -webkit-appearance: button;
     -moz-appearance: button;
@@ -117,12 +121,9 @@ a.button{
 }
 
 
-
-
 /*********************/
 /*     Buttons       */
 /*********************/
-
 .primary-btn
 {
     padding: 0.75rem 1.25rem;
@@ -146,7 +147,6 @@ a.button{
     transform: scale(1.2);
 }
 
-
 .secondary-btn
 {
     padding: 0.25em 0.75em;
@@ -169,8 +169,6 @@ a.button{
     transform: scale(1.1);
 }
 
-
-
 .socials-hover-container img
 {
     transition: transform 0.25s ease-out;
@@ -182,7 +180,6 @@ a.button{
 
     transform: scale(1.2);
 }
-
 
 .page-margin
 {
@@ -198,7 +195,6 @@ a.button{
 /**********************/
 /* Desktop Navigation */
 /**********************/
-
 .nav-alc-logo
 {
     width: 3rem;
@@ -224,7 +220,6 @@ a.button{
 /*********************/
 /* Mobile Navigation */
 /*********************/
-
 .mobile-nav-icon
 {
     font-size: 2rem;
@@ -393,7 +388,7 @@ a.button{
 
 .drop-text .small-margin
 {
-    margin-bottom: 1.25em;
+    margin-bottom: 0.5em;
 }
 
 .drop-button
@@ -488,8 +483,6 @@ a.button{
 /**************/
 /*   Section  */
 /**************/
-
-
 section
 {
     padding-top: 9rem;
@@ -500,7 +493,6 @@ section
 {
     padding-top: 4rem;
 }
-
 
 /* === Section Colors === */
 .sec-light-text
@@ -545,8 +537,6 @@ section
     background-color: var(--secondary);
 }
 
-
-
 /* === Section Title === */
 .sec-title
 {
@@ -588,8 +578,6 @@ section
     margin-left: 0.75em;
 }
 
-
-
 /* === Section Body === */
 .sec-body
 {
@@ -612,9 +600,7 @@ section
     margin-bottom: 10rem;
 }
 
-
 /* === Video Containers === */
-
 .sec-video-container {
     position: relative;
     width: 100%;
@@ -628,9 +614,6 @@ section
     height: 100%;
     border: 0;
 }
-
-
-
 
 /* === Big Numbered List === */
 .big-list
@@ -667,8 +650,6 @@ section
     text-align: center;
 
 }
-
-
 
 /* === Section Card === */
 .sec-card-container
@@ -776,10 +757,37 @@ section
     max-height: 100vh;
 }
 
+/* === Form === */
+.form-success
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-success i
+{
+    font-size: 5rem;
+}
+
+.submit-container
+{
+    grid-area: submit;
+
+    display: flex;
+    justify-content: center;
+}
+
+.submit-container button
+{
+    width: 8rem;
+    margin: 0 0;
+}
+
 /*******************/
 /*     Footer      */
 /*******************/
-
 .footer-row-container
 {
     display: flex;
@@ -857,15 +865,12 @@ section
 }
 
 
-
 /*****************/
 /* Media Queries */
 /*****************/
-
-
 /* 736px - 991px: Tablets, and small laptops*/
-@media (min-width: 46em){
-
+@media (min-width: 46em)
+{
     .page-margin
     {
         width: 100%;
@@ -877,7 +882,6 @@ section
     /**********************/
     /* Desktop Navigation */
     /**********************/
-
     .nav-underline
     {
         border-bottom: 1px solid var(--text-light);
@@ -984,11 +988,9 @@ section
     }
     
 
-
     /**************/
     /*   Section  */
     /**************/
-    
     .sec-title
     {
         width: 38rem;
@@ -1014,15 +1016,10 @@ section
         padding-bottom: 9rem;
     }
 
-
     .sec-title span
     {
         max-width: 12em;
     }
-
-
-    
-
 
     /* === Section Card === */
 
@@ -1044,9 +1041,7 @@ section
         padding: 0 3rem;
     }
 
-
     /* === Big Numbered List === */
-
     .big-list li
     {
         height: 12rem;
@@ -1116,11 +1111,9 @@ section
 @media (min-width: 62em ){
 
 
-
     /*******************/
     /*   Navigation    */
     /*******************/
-
     #nav-middle-u-list li:first-child
     {
         text-align: right;
@@ -1139,11 +1132,9 @@ section
     }
 
 
-
     /*******************/
     /*   Section Card  */
     /*******************/
-
     .sec-card-container 
     {
         width: 100%;
@@ -1169,8 +1160,6 @@ section
         
         flex-direction: column;
         justify-content: center;
-
-
     }
 
     .sec-card-text-container p
@@ -1220,6 +1209,11 @@ section
     .sec-body 
     {
         width: 40rem;
+    }
+
+    .sec-form
+    {
+        width: 30rem;
     }
 
 }
