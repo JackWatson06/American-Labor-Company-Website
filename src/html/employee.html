@@ -161,7 +161,7 @@
             <header class="page-margin sec-light-text drop-area" >
                 <h2 id="find-job-title" class="sec-title"><span>JOB FORM</span></h2>
 
-                <div class="sec-body display-none js-form-success">
+                <div class="sec-body display-none form-success js-form-success">
                     <i class="fas fa-check-circle sec-success-text"></i>
                     <p>Congratulations! The form was submitted.</p>
                     <button class="primary-btn" onclick=" location.href='./'; ">Back</button>
@@ -174,8 +174,6 @@
 
                     <!-- Job form -->
                     <form id="job-form" class="sec-body sec-form" method="post">
-
-                        <input name="document[document_usage_id]" type="text" value="1" hidden>
 
                         <!-- Required: First Name Field -->
                         <div id="fname-field" class="form-group">
@@ -322,7 +320,8 @@
                                     <p class="drop-file">File Uploaded</p>
                                     <button class="drop-remove secondary-btn">Remove</button>
                                 </div>
-                                <input id="resume" class="drop-input" name="document[file]" type="file" hidden>
+                                <input id="resume" class="drop-input" type="file" hidden>
+                                <input class="drop-usage" value="1" hidden>
                             </div>
                         </div>
 

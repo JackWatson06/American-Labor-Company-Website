@@ -124,11 +124,6 @@ header
 /* 992px - 1311px: Laptops*/
 @media (min-width: 62em )
 {
-    main
-    {
-        grid-template-rows: minmax(68rem, 90vh) auto;
-    }
-
 }
 
 /* 1311px - infinity: Laptops Large Screens*/

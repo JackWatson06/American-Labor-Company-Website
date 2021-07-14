@@ -8,6 +8,7 @@ const droppableElements = {
     dropGallary       : "drop-gallery",
     dropButton        : "drop-button",
     dropFile          : "drop-file",
+    dropUsage         : "drop-usage",
     dropRemove        : "drop-remove"
 }
 
@@ -91,11 +92,15 @@ const handleFiles = (files) =>
     if(!validFiles.includes(files[0].type))
     {
         alert("Invalid file format. Only Mircosoft Word, Excel, Text, or PDF files are allowed.");
+        return;
     }
 
     // Set the input field of the document selector
     let inputField = document.querySelector("." + droppableElements.dropInput);
+    let usageField = document.querySelector("." + droppableElements.dropUsage);
     inputField.files = files;
+    inputField.setAttribute("name", "document[file]");
+    usageField.setAttribute("name", "document[document_usage_id]");
 
     showGallaryFromFile(inputField.files[0]);
     hideText();
@@ -115,8 +120,13 @@ const removeFileFromGallary = (file) =>
     hideGallary();
     showText();
 
+    // Set the input fields for the document upload to be invalid
     let inputField = document.querySelector("." + droppableElements.dropInput);
+    let usageField = document.querySelector("." + droppableElements.dropUsage);
+
     inputField.value = null;
+    inputField.removeAttribute('name');
+    usageField.removeAttribute('name');
 }
 
 const hideGallary = () => 

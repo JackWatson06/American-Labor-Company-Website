@@ -8,12 +8,11 @@ import * as inputMask from "../components/input-mask.js";
 import * as select    from "../components/select.js";
 import * as form      from "../components/form.js";
 
-window.onload = (e) =>{
-
+window.onload = (e) =>
+{
     mobileNav.mobileNavigationMenuSetup();
     scrolling.navigationChangeColorOnScrollSetup();
     select.selectSetup();
     inputMask.inputMaskSetup();
-    form.formSetup("find-employee-form", "api/employer");
-
+    form.formSetup("find-employee-form", "api/company_leads");
 }

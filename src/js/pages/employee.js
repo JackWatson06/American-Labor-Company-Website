@@ -17,6 +17,6 @@ window.onload = (e) =>{
     droppable.fileDroppableSetup();
     select.selectSetup();
     inputMask.inputMaskSetup();
-    form.formSetup("job-form", "api/worker");
+    form.formSetup("job-form", "api/worker_leads");
 
 }
