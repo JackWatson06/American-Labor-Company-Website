@@ -52,8 +52,8 @@ header
         "resume resume" var(--row-size)
         "info info" var(--row-size)
         "info info" var(--row-size)
-        "submit submit" var(--row-size) / 1fr;
-    grid-template-columns: 50% 50%;
+        "submit submit" var(--row-size) / 1fr 1fr;
+
 
     column-gap: 0.5rem;
     row-gap: 1.5rem;
